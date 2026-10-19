@@ -1,1 +1,11 @@
-test|https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Fisherman%27s_Bastion_2014.jpg/320px-Fisherman%27s_Bastion_2014.jpg
+hotel.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Corinthia_Hotel_Budapest_.jpg/1280px-Corinthia_Hotel_Budapest_.jpg
+p01-visegrad.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Views_from_Visegr%C3%A1d_Castle%2C_2006_%2801%29.jpg/960px-Views_from_Visegr%C3%A1d_Castle%2C_2006_%2801%29.jpg
+p03-gellert.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/View_from_the_Gellert_Hill_2014_01.jpg/960px-View_from_the_Gellert_Hill_2014_01.jpg
+p04-harmashatar.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Guckler_kil%C3%A1t%C3%B3.jpg/960px-Guckler_kil%C3%A1t%C3%B3.jpg
+p07-japanese.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Jap%C3%A1n_kert.jpg/960px-Jap%C3%A1n_kert.jpg
+p08-fuveszkert.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/P%C3%A1lmah%C3%A1z_%28F%C3%BCv%C3%A9szkert%2C_Budapest%29_01.jpg/960px-P%C3%A1lmah%C3%A1z_%28F%C3%BCv%C3%A9szkert%2C_Budapest%29_01.jpg
+p10-citypark.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg/960px-Vajdahunyad_v%C3%A1ra_Budapest_September_2013.jpg
+p11-parliament.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Hungarian_Parliament_Building_2023-9.jpg/960px-Hungarian_Parliament_Building_2023-9.jpg
+p12-castle.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Fisherman%27s_Bastion_2014.jpg/960px-Fisherman%27s_Bastion_2014.jpg
+p14-dohany.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Interior_of_the_Great_Synagogue_in_Doh%C3%A1ny_Street_20180824.jpg/960px-Interior_of_the_Great_Synagogue_in_Doh%C3%A1ny_Street_20180824.jpg
+p19-market.jpg|https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Light_streaming_into_the_interior_of_Budapest_Great_Market_Hall%2C_Winter_2010.jpg/960px-Light_streaming_into_the_interior_of_Budapest_Great_Market_Hall%2C_Winter_2010.jpg

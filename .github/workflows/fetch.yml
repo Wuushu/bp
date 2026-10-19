@@ -14,7 +14,7 @@ jobs:
           mkdir -p photos
           while IFS='|' read -r name url; do
             [ -z "$name" ] && continue
-            curl -sSfL -A "BudapestTripMenu/1.0 (personal print; github.com/Wuushu/bp)" -o "photos/$name" "$url"
+            curl -sSfL -A "BudapestTripMenu/1.0 (personal print; https://github.com/Wuushu/bp)" -o "photos/$name" "$url" || echo "FAILED $name"
           done < urls.txt
           ls -la photos
       - run: |
