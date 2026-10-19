@@ -1,0 +1,25 @@
+name: fetch-photos
+on:
+  push:
+    branches: [photo-fetch]
+    paths: [urls.txt]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p photos
+          while IFS='|' read -r name url; do
+            [ -z "$name" ] && continue
+            curl -sSfL -A "BudapestTripMenu/1.0 (personal print; github.com/Wuushu/bp)" -o "photos/$name" "$url"
+          done < urls.txt
+          ls -la photos
+      - run: |
+          git config user.name "photo-fetch"
+          git config user.email "photo-fetch@users.noreply.github.com"
+          git add photos
+          git commit -m "Fetched photos" || echo "nothing to commit"
+          git push
