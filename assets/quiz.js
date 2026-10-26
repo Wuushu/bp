@@ -13,7 +13,7 @@
   if (!Q || !root) return;
 
   var qs = Q.questions, N = qs.length, audio = document.getElementById('qaudio');
-  var KEY = 'quiz-' + Q.id, PKEY = 'quiz-players', SKEY = 'quiz-speak';
+  var KEY = 'quiz-' + Q.id + '-' + N, PKEY = 'quiz-players', SKEY = 'quiz-speak';
   var LETTERS = ['A', 'B', 'C', 'D'];
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -76,10 +76,10 @@
     }).join('');
     var n = Object.keys(chosen).filter(function (k) { return chosen[k]; }).length;
     root.innerHTML =
-      '<p class="qlead">' + N + ' questions about ' + esc(Q.place) + '. The answers are in the audio guides.</p>' +
+      '<p class="qlead">' + N + ' questions about ' + esc(Q.place) + '. The answers are in the audio guides and the bonus track.</p>' +
       '<p class="qlabel">Who’s playing?</p>' +
       '<div class="qchips">' + chips + (roster.length < 4 ? '<button type="button" class="qadd" data-add="1">+ Add player</button>' : '') + '</div>' +
-      '<p class="qhint">' + (n > 1 ? 'You’ll take turns – each question goes to the next player.' : 'Pick one or more. Tap ✎ to put in your names – they stay on this phone.') + '</p>' +
+      '<p class="qhint">' + (n > 1 ? 'You’ll take turns' + (N % n === 0 ? ' – ' + (N / n) + ' questions each.' : ', one question each.') : 'Pick one or more. Tap ✎ to put in your names – they stay on this phone.') + '</p>' +
       '<label class="qspeak"><input type="checkbox" id="qspk"' + (speak ? ' checked' : '') + '> Read the questions aloud</label>' +
       '<button type="button" class="btn primary qgo" data-go="1"' + (n ? '' : ' disabled') + '>Start the quiz</button>';
     var inp = document.getElementById('qname');
