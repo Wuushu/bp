@@ -23,7 +23,7 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   WeightNorm.apply(module, name, dim)
 Collecting en-core-web-sm==3.8.0
   Downloading en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 234.4 MB/s  0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 44.2 MB/s  0:00:00
 Installing collected packages: en-core-web-sm
 Successfully installed en-core-web-sm-3.8.0
 
@@ -38,3 +38,12 @@ done tts/vis-2-bm_george.wav
 done tts/vis-3-bm_george.wav
 done tts/vis-4-bm_george.wav
 done tts/vis-5-bm_george.wav
+done tts/vis-facts-bm_george.wav
+done tts/vis-q1-bm_george.wav
+done tts/vis-q2-bm_george.wav
+done tts/vis-q3-bm_george.wav
+done tts/vis-q4-bm_george.wav
+done tts/vis-q5-bm_george.wav
+done tts/vis-q6-bm_george.wav
+done tts/vis-q7-bm_george.wav
+done tts/vis-q8-bm_george.wav
