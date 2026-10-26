@@ -14,6 +14,11 @@
   var audio = $('#waudio'), fl = $('#wfloat');
   var current = null, pos = null, acc = null, gps = 'idle', watchId = null, map = null, me = null, meAcc = null, pins = {};
   var heard = new Set();
+  var mini = false;                      // compact button once you scroll down the page
+  window.addEventListener('scroll', function () {
+    var m = window.scrollY > 420;
+    if (m !== mini) { mini = m; if (fl) fl.classList.toggle('mini', m); }
+  }, { passive: true });
 
   var ICON = {
     play: '<svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>',
@@ -119,8 +124,8 @@
   }
 
   /* ---------- UI ---------- */
-  function pill(icon, title, sub, extra) {
-    return icon + '<span class="wt"><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</span>' + (extra ? '<em>' + extra + '</em>' : '');
+  function pill(icon, title, sub, extra, n) {
+    return icon + (n ? '<span class="wn">' + n + '</span>' : '') + '<span class="wt"><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</span>' + (extra ? '<em>' + extra + '</em>' : '');
   }
   function render() {
     var at = here();
@@ -146,11 +151,11 @@
     if (loaded && !movedOn) {                                    // play/pause control
       var c = byN(current), left = (audio.duration || c.secs) - (audio.currentTime || 0);
       cls = 'on';
-      html = pill(audio.paused ? ICON.play : ICON.pause, c.n + ' · ' + c.title, audio.paused ? 'Paused – tap to continue' : 'Playing – tap to pause', fmtT(left));
+      html = pill(audio.paused ? ICON.play : ICON.pause, c.n + ' · ' + c.title, audio.paused ? 'Paused – tap to continue' : 'Playing – tap to pause', fmtT(left), c.n);
       act = 'play:' + c.n;
     } else if (at) {                                             // you're at a spot: light up
       cls = 'near';
-      html = pill(ICON.play, at.n + ' · ' + at.title, heard.has(at.n) ? 'Listen again' : 'Listen to the audio guide for this spot');
+      html = pill(ICON.play, at.n + ' · ' + at.title, heard.has(at.n) ? 'Listen again' : 'Listen to the audio guide for this spot', '', at.n);
       act = 'play:' + at.n;
     } else {                                                     // inactive
       var sub;
@@ -163,7 +168,7 @@
       html = pill(ICON.phones, 'Audio guide', sub);
       act = gps === 'idle' ? 'gps' : 'map';
     }
-    fl.className = 'wfloat ' + cls;
+    fl.className = 'wfloat ' + cls + (mini ? ' mini' : '');
     fl.innerHTML = html;
     fl.dataset.act = act;
     fl.hidden = false;
