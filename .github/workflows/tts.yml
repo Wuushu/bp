@@ -32,7 +32,7 @@ jobs:
               for r in pipe(text, voice='bm_george', speed=1.0, split_pattern=r'\n+'):
                   a = r[2] if isinstance(r, tuple) else r.audio
                   a = a.cpu().numpy() if hasattr(a, 'cpu') else np.asarray(a)
-                  parts += [a, np.zeros(int(24000 * 0.5), dtype=a.dtype)]
+                  parts += [a, np.zeros(int(24000 * (2.8 if 'facts' in f else 0.5)), dtype=a.dtype)]
               sf.write(out, np.concatenate(parts), 24000)
               print('done', out)
           PY
