@@ -2,7 +2,5 @@
 
 [notice] A new release of pip is available: 26.2.1 -> 26.2.2
 [notice] To update, run: pip install --upgrade pip
-+ for v in en-US-AndrewMultilingualNeural en-GB-RyanNeural
-+ edge-tts --voice en-US-AndrewMultilingualNeural --file tts/en-budacastle.txt --write-media tts/en-edge-en-US-AndrewMultilingualNeural.mp3
-+ for v in en-US-AndrewMultilingualNeural en-GB-RyanNeural
-+ edge-tts --voice en-GB-RyanNeural --file tts/en-budacastle.txt --write-media tts/en-edge-en-GB-RyanNeural.mp3
++ for v in en-GB-RyanNeural
++ edge-tts --voice en-GB-RyanNeural --file tts/en-gellert.txt --write-media tts/en-gellert-edge-en-GB-RyanNeural.mp3
