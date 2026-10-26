@@ -65,6 +65,42 @@ blockquote cite{display:block;font-style:normal;font-size:13px;color:var(--muted
 .pager a span{display:block;color:var(--muted);font-size:12px}
 footer{border-top:1px solid var(--rule);margin-top:24px;padding:16px 0 40px;font-size:12px;color:var(--muted)}
 footer a{color:var(--muted)}
+/* audio walk */
+.walk{background:var(--mist);border-radius:16px;padding:16px;margin:0 0 22px}
+.walk h2{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.wintro{margin:0 0 12px;color:var(--ink2);font-size:16px}
+.wmap{position:relative;z-index:0;height:320px;border-radius:12px;overflow:hidden;background:var(--river);margin:0 0 12px}
+#wstart.on{background:#fff;color:var(--ink)}
+.wstatus{font-size:14px;color:var(--muted);margin:8px 0 2px;min-height:1.4em}
+ol.stops{list-style:none;margin:8px 0 0;padding:0}
+.stop{border-top:1px solid var(--rule);padding:10px 0}
+.srow{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.sn{flex:none;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font:400 17px var(--serif)}
+.stop.done .sn{background:var(--ink)}
+.stext{flex:1;min-width:0}.stext b{display:block;font-weight:600;line-height:1.3}.stext small{color:var(--muted);font-size:14px}
+.sicon{flex:none;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;color:var(--ink)}
+.stop.playing .sicon{background:var(--ink);color:#fff}
+.stop details{margin:6px 0 0 48px;font-size:15px;color:var(--ink2)}
+.stop summary{cursor:pointer;color:var(--muted);font-size:14px}
+.stop details p{margin:8px 0 0}
+.wfoot{font-size:12px;color:var(--muted);margin:10px 0 0}
+.linkbtn{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;font:inherit;cursor:pointer}
+.wfloat{position:fixed;z-index:2000;top:calc(56px + env(safe-area-inset-top));right:12px;max-width:calc(100% - 24px);display:flex;align-items:center;gap:8px;
+ padding:10px 14px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:600 15px var(--sans);box-shadow:0 4px 16px rgba(26,46,68,.25);cursor:pointer}
+.wfloat[hidden]{display:none}
+.wfloat span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wfloat em{font-style:normal;font-weight:400;opacity:.8;white-space:nowrap}
+.wfloat svg{flex:none}
+.wfloat.near{background:var(--accent);border-color:var(--accent);animation:wpulse 1.6s ease-in-out infinite}
+.wfloat.ghost{background:#fff;color:var(--ink)}
+@keyframes wpulse{0%,100%{box-shadow:0 0 0 0 rgba(178,48,43,.55)}50%{box-shadow:0 0 0 12px rgba(178,48,43,0)}}
+@media (prefers-reduced-motion:reduce){.wfloat.near{animation:none}}
+.wpin{width:30px;height:30px;border-radius:50%;background:#B2302B;color:#fff;border:2px solid #fff;display:grid;place-items:center;font:400 15px "Young Serif",Georgia,serif;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.wpin.done{background:#1A2E44}
+.wdot{position:absolute;left:-4px;top:-4px;width:8px;height:8px;border-radius:50%;background:#3E5267;border:1.5px solid #fff}
+.wtag{position:absolute;background:#fff;border:1px solid #66778A;color:#3E5267;font:600 11px "Instrument Sans",sans-serif;padding:2px 6px;border-radius:6px;white-space:nowrap}
+.wtag.left{right:8px;top:-10px}.wtag.right{left:8px;top:-10px}.wtag.below{left:-22px;top:8px}
+.wpop{margin-top:6px;border:0;border-radius:8px;background:#1A2E44;color:#fff;font:600 14px "Instrument Sans",sans-serif;padding:6px 12px;cursor:pointer}
 /* index */
 .intro{color:var(--ink2);margin:6px 0 18px}
 .toc h2{margin-top:26px}
