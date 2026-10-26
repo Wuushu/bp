@@ -23,7 +23,7 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   WeightNorm.apply(module, name, dim)
 Collecting en-core-web-sm==3.8.0
   Downloading en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 44.2 MB/s  0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 74.2 MB/s  0:00:00
 Installing collected packages: en-core-web-sm
 Successfully installed en-core-web-sm-3.8.0
 
@@ -33,17 +33,15 @@ Successfully installed en-core-web-sm-3.8.0
   warnings.warn(
 [38;5;2m✔ Download and installation successful[0m
 You can now load the package via spacy.load('en_core_web_sm')
-done tts/vis-1-bm_george.wav
-done tts/vis-2-bm_george.wav
-done tts/vis-3-bm_george.wav
-done tts/vis-4-bm_george.wav
-done tts/vis-5-bm_george.wav
-done tts/vis-facts-bm_george.wav
-done tts/vis-q1-bm_george.wav
-done tts/vis-q2-bm_george.wav
-done tts/vis-q3-bm_george.wav
-done tts/vis-q4-bm_george.wav
-done tts/vis-q5-bm_george.wav
-done tts/vis-q6-bm_george.wav
-done tts/vis-q7-bm_george.wav
-done tts/vis-q8-bm_george.wav
+done tts/vis-quiz-01-bm_george.wav
+done tts/vis-quiz-02-bm_george.wav
+done tts/vis-quiz-03-bm_george.wav
+done tts/vis-quiz-04-bm_george.wav
+done tts/vis-quiz-05-bm_george.wav
+done tts/vis-quiz-06-bm_george.wav
+done tts/vis-quiz-07-bm_george.wav
+done tts/vis-quiz-08-bm_george.wav
+done tts/vis-quiz-09-bm_george.wav
+done tts/vis-quiz-10-bm_george.wav
+done tts/vis-quiz-11-bm_george.wav
+done tts/vis-quiz-12-bm_george.wav
