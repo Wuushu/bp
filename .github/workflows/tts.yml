@@ -1,0 +1,33 @@
+name: tts-test
+on:
+  push:
+    branches: [photo-fetch]
+    paths: ['tts/*.txt']
+permissions:
+  contents: write
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: |
+          pip install -q piper-tts==1.2.0
+          mkdir -p voices
+          base=https://huggingface.co/rhasspy/piper-voices/resolve/main/sv/sv_SE/nst/medium
+          curl -sSfL -o voices/sv.onnx "$base/sv_SE-nst-medium.onnx"
+          curl -sSfL -o voices/sv.onnx.json "$base/sv_SE-nst-medium.onnx.json"
+          for f in tts/*.txt; do
+            n=$(basename "$f" .txt)
+            piper --model voices/sv.onnx --output_file "tts/$n.wav" --sentence_silence 0.35 --length_scale 1.05 < "$f"
+            ffmpeg -loglevel error -y -i "tts/$n.wav" -codec:a libmp3lame -q:a 3 "tts/$n.mp3"
+            rm "tts/$n.wav"
+          done
+          ls -la tts
+      - run: |
+          git config user.name "tts-test"
+          git config user.email "tts-test@users.noreply.github.com"
+          git add tts/*.mp3
+          git commit -m "TTS test audio" || echo "nothing to commit"
+          git push
