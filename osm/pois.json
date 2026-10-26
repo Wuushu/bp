@@ -1,0 +1,4318 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-26T16:45:20Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 485612528,
+  "lat": 47.8044598,
+  "lon": 19.0084708,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Visegrád-Szentgyörgypuszta",
+    "public_transport": "station",
+    "website": "https://kompok-revek.hu/revatkelok/dunai-komp/kisoroszi-szentgyorgypuszta-komp/"
+  }
+},
+{
+  "type": "node",
+  "id": 485612532,
+  "lat": 47.8056831,
+  "lon": 19.0093521,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Kisoroszi",
+    "public_transport": "station",
+    "website": "https://kompok-revek.hu/revatkelok/dunai-komp/kisoroszi-szentgyorgypuszta-komp/"
+  }
+},
+{
+  "type": "node",
+  "id": 486635929,
+  "lat": 47.8212618,
+  "lon": 19.0134285,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "name": "Kisoroszi rév",
+    "source": "turistautak.hu",
+    "source:date": "2013-11-01",
+    "url": "http://turistautak.hu/poi.php?id=91775"
+  }
+},
+{
+  "type": "node",
+  "id": 685420342,
+  "lat": 47.7981114,
+  "lon": 18.9446955,
+  "tags": {
+    "direction": "70-110",
+    "ele": "280",
+    "name": "Kövesmező",
+    "tourism": "viewpoint",
+    "wikidata": "Q110249154"
+  }
+},
+{
+  "type": "node",
+  "id": 706175432,
+  "lat": 47.7867186,
+  "lon": 18.9675196,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "Visegrád, nagymarosi rév",
+    "network": "Volánbusz",
+    "network:wikidata": "Q746503",
+    "network:wikipedia": "hu:Volánbusz",
+    "operator": "Volánbusz",
+    "panoramax": "40e950ed-1357-4b5a-86a2-a7e395016157",
+    "public_transport": "platform",
+    "shelter": "yes",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1354628924,
+  "lat": 47.7885657,
+  "lon": 18.9710058,
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "18",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "amenity": "kindergarten",
+    "check_date": "2026-10-24",
+    "name": "Fellegvár Óvoda"
+  }
+},
+{
+  "type": "node",
+  "id": 1357780579,
+  "lat": 47.7932301,
+  "lon": 18.9803370,
+  "tags": {
+    "direction": "220",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 1357780710,
+  "lat": 47.7904971,
+  "lon": 18.9710797,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "Visegrád, Királyi Palota",
+    "network": "Volánbusz",
+    "network:wikidata": "Q746503",
+    "network:wikipedia": "hu:Volánbusz",
+    "operator": "Volánbusz",
+    "public_transport": "platform",
+    "shelter": "yes",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1357780798,
+  "lat": 47.7869303,
+  "lon": 18.9672710,
+  "tags": {
+    "addr:postcode": "2025",
+    "addr:street": "Rév utca",
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Visegrád",
+    "operator": "MAHARD",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1627541498,
+  "lat": 47.7865988,
+  "lon": 18.9676568,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "Visegrád, nagymarosi rév",
+    "network": "Volánbusz",
+    "network:wikidata": "Q746503",
+    "network:wikipedia": "hu:Volánbusz",
+    "operator": "Volánbusz",
+    "panoramax": "b194f134-634e-4133-b41b-72a920246c80",
+    "public_transport": "platform",
+    "shelter": "yes",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1705735887,
+  "lat": 47.8176104,
+  "lon": 18.9701655,
+  "tags": {
+    "ele": "203",
+    "historic": "ruins",
+    "name": "Volt Zammenhof-kilátó"
+  }
+},
+{
+  "type": "node",
+  "id": 1818980142,
+  "lat": 47.7860228,
+  "lon": 18.9705803,
+  "tags": {
+    "artist_name": "Madarassy Walter",
+    "historic": "memorial",
+    "name": "Árpádházi Szent Margit",
+    "ref:kozterkep": "15266"
+  }
+},
+{
+  "type": "node",
+  "id": 2089884510,
+  "lat": 47.7872129,
+  "lon": 18.9795396,
+  "tags": {
+    "direction": "-90",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 2434471910,
+  "lat": 47.7934365,
+  "lon": 18.9738766,
+  "tags": {
+    "historic": "memorial"
+  }
+},
+{
+  "type": "node",
+  "id": 2436883764,
+  "lat": 47.7894128,
+  "lon": 18.9612600,
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:housenumber": "5",
+    "addr:postcode": "2626",
+    "addr:street": "Béla király sétány",
+    "amenity": "fast_food",
+    "diet:vegan": "no",
+    "diet:vegetarian": "yes",
+    "name": "Rév Büfé",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392363,
+  "lat": 47.7862457,
+  "lon": 18.9726844,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "I. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392364,
+  "lat": 47.7863336,
+  "lon": 18.9727482,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "II. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392365,
+  "lat": 47.7864719,
+  "lon": 18.9728324,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "III. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392366,
+  "lat": 47.7866082,
+  "lon": 18.9729054,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "IV. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392367,
+  "lat": 47.7869114,
+  "lon": 18.9731062,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "VI. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392368,
+  "lat": 47.7873031,
+  "lon": 18.9733384,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "IX. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392369,
+  "lat": 47.7867710,
+  "lon": 18.9730018,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "material": "stone",
+    "memorial": "stele",
+    "name": "V. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392370,
+  "lat": 47.7870292,
+  "lon": 18.9731600,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "VII. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392371,
+  "lat": 47.7871907,
+  "lon": 18.9732634,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "VIII. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392373,
+  "lat": 47.7873978,
+  "lon": 18.9734337,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "X. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392374,
+  "lat": 47.7874939,
+  "lon": 18.9735047,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "XI. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392375,
+  "lat": 47.7875947,
+  "lon": 18.9735737,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "XII. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392376,
+  "lat": 47.7876963,
+  "lon": 18.9736559,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "XIII. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392391,
+  "lat": 47.7878682,
+  "lon": 18.9727157,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392392,
+  "lat": 47.7878765,
+  "lon": 18.9737469,
+  "tags": {
+    "historic": "wayside_cross"
+  }
+},
+{
+  "type": "node",
+  "id": 2960392396,
+  "lat": 47.7883631,
+  "lon": 18.9729806,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 2961927047,
+  "lat": 47.7854788,
+  "lon": 18.9708418,
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "2",
+    "addr:postcode": "2025",
+    "addr:street": "Nagy Lajos utca",
+    "name": "Mátyás Jeka ifjúsági szálló",
+    "tourism": "hostel",
+    "website": "http://www.jeka.hu/dunakanyari-szallasok/visegrad/matyas-turista-szallo"
+  }
+},
+{
+  "type": "node",
+  "id": 2961927048,
+  "lat": 47.7858112,
+  "lon": 18.9696658,
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "1",
+    "addr:postcode": "2025",
+    "addr:street": "Rév utca",
+    "check_date": "2023-05-20",
+    "check_date:opening_hours": "2022-08-05",
+    "email": "info@zugfozdevisegrad.hu",
+    "fee": "yes",
+    "name": "Zugfőzde Pálinkamúzeum",
+    "opening_hours": "Tu-Sa 14:00-18:00",
+    "phone": "+36 26 597 026",
+    "tourism": "museum",
+    "website": "http://www.palinkamuzeumvisegrad.hu/"
+  }
+},
+{
+  "type": "node",
+  "id": 2961927072,
+  "lat": 47.7853348,
+  "lon": 18.9718208,
+  "tags": {
+    "artist_name": "Mikus Sándor",
+    "historic": "memorial",
+    "memorial": "bust",
+    "name": "Áprily Lajos",
+    "ref:kozterkep": "14961"
+  }
+},
+{
+  "type": "node",
+  "id": 2965785361,
+  "lat": 47.8051078,
+  "lon": 19.0195086,
+  "tags": {
+    "historic": "wayside_cross"
+  }
+},
+{
+  "type": "node",
+  "id": 2965859560,
+  "lat": 47.8067354,
+  "lon": 19.0114885,
+  "tags": {
+    "description": "E házban élt Ujváry Ignácz, festőművész (1860-1927), iparművészeti főiskolai tanár, az operaház és a nemzeti színház díszlettervezője, Ipolyi Arnold-, Rökk Szilárd- és Műbarát-díjas, részese a Feszty-féle körkép alkotásának (...).",
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Ujváry Ignác"
+  }
+},
+{
+  "type": "node",
+  "id": 2965905611,
+  "lat": 47.8072325,
+  "lon": 19.0102954,
+  "tags": {
+    "board_type": "history",
+    "historic": "memorial",
+    "inscription": "Itt élt és alkotott Illés Lajos 1992-2007 között. Kossuth-díjas zeneszerző, a Kisoroszi Redormátus Gyülekezet kántora, Kisoroszi díszpolgára. Emlékét őrzi a gyülekezet.",
+    "memorial": "plaque",
+    "name": "Illés Lajos"
+  }
+},
+{
+  "type": "node",
+  "id": 2965905612,
+  "lat": 47.8070218,
+  "lon": 19.0107340,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "statue",
+    "name": "Nepomuki Szent János"
+  }
+},
+{
+  "type": "node",
+  "id": 2965905613,
+  "lat": 47.8071416,
+  "lon": 19.0102244,
+  "tags": {
+    "artist:wikidata": "Q1327102",
+    "artist:wikipedia": "hu:Tóth Dávid (szobrász)",
+    "artist_name": "Tóth Dávid",
+    "historic": "memorial",
+    "inscription": "Pegazus - Tóth Dávid szobrászművész alkotása. - Állíttatta Kisoroszi község Önkormányzata, az 1956-os forradalom és szabadságharc 50. évfordulója alkalmából",
+    "memorial": "statue",
+    "memorial:conflict": "1956",
+    "name": "Pegazus - 1956-os emlékmű",
+    "ref:kozterkep": "10036",
+    "start_date": "2006",
+    "subject:wikidata": "Q164348"
+  }
+},
+{
+  "type": "node",
+  "id": 2965961469,
+  "lat": 47.8080197,
+  "lon": 19.0104180,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "I. és II. világháborús emléktáblák"
+  }
+},
+{
+  "type": "node",
+  "id": 2965961470,
+  "lat": 47.8076326,
+  "lon": 19.0108993,
+  "tags": {
+    "addr:city": "Kisoroszi",
+    "addr:housenumber": "1",
+    "addr:postcode": "2024",
+    "addr:street": "Hősök tere",
+    "name": "Kisoroszi Helytörténeti Múzeum",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "node",
+  "id": 2965961471,
+  "lat": 47.8089893,
+  "lon": 19.0112556,
+  "tags": {
+    "historic": "memorial",
+    "name": "Millenniumi emlékmű"
+  }
+},
+{
+  "type": "node",
+  "id": 2965993866,
+  "lat": 47.8082056,
+  "lon": 19.0044908,
+  "tags": {
+    "artist_name": "K. Greff József;Kutnyánszky Gyula",
+    "historic": "wayside_shrine",
+    "memorial": "war_memorial",
+    "name": "I. világháborús emlékmű",
+    "religion": "christian",
+    "start_date": "1935"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008250,
+  "lat": 47.8090585,
+  "lon": 19.0009193,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008251,
+  "lat": 47.8091034,
+  "lon": 19.0009873,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008252,
+  "lat": 47.8091049,
+  "lon": 19.0009114,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008253,
+  "lat": 47.8091559,
+  "lon": 19.0010531,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008254,
+  "lat": 47.8091574,
+  "lon": 19.0009650,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008255,
+  "lat": 47.8091994,
+  "lon": 19.0011026,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008256,
+  "lat": 47.8092143,
+  "lon": 19.0010263,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008257,
+  "lat": 47.8092495,
+  "lon": 19.0011781,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008258,
+  "lat": 47.8092630,
+  "lon": 19.0010888,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008259,
+  "lat": 47.8093094,
+  "lon": 19.0012248,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008260,
+  "lat": 47.8093109,
+  "lon": 19.0011512,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008261,
+  "lat": 47.8093596,
+  "lon": 19.0011992,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008262,
+  "lat": 47.8093663,
+  "lon": 19.0012828,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008263,
+  "lat": 47.8094168,
+  "lon": 19.0012697,
+  "tags": {
+    "historic": "wayside_shrine"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008266,
+  "lat": 47.8095973,
+  "lon": 19.0014051,
+  "tags": {
+    "historic": "wayside_cross",
+    "man_made": "cross"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008267,
+  "lat": 47.8096164,
+  "lon": 19.0013791,
+  "tags": {
+    "artist_name": "Kulcsár Írisz",
+    "historic": "wayside_cross",
+    "man_made": "cross",
+    "name": "Kisoroszi kálvária",
+    "ref:kozterkep": "32055",
+    "start_date": "2013-03-31"
+  }
+},
+{
+  "type": "node",
+  "id": 2966008269,
+  "lat": 47.8096344,
+  "lon": 19.0013515,
+  "tags": {
+    "historic": "wayside_cross",
+    "man_made": "cross"
+  }
+},
+{
+  "type": "node",
+  "id": 3114332091,
+  "lat": 47.8076431,
+  "lon": 19.0055266,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "statue",
+    "name": "Árpád-házi Szent Erzsébet szobor",
+    "note": "Kotormán Norbert alkotása"
+  }
+},
+{
+  "type": "node",
+  "id": 3132708773,
+  "lat": 47.7800282,
+  "lon": 18.9520597,
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:housenumber": "44",
+    "addr:postcode": "2626",
+    "addr:street": "Vasút utca",
+    "name": "Nagymaros",
+    "operator": "MÁV",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "M",
+    "ref:mav": "299",
+    "train": "yes",
+    "uic_ref": "5510488",
+    "website": "https://www.mavcsoport.hu/mav-start/belfoldi-utazas/vasutallomas/nagymaros",
+    "wikidata": "Q21866921",
+    "wikipedia": "hu:Nagymaros vasútállomás"
+  }
+},
+{
+  "type": "node",
+  "id": 3141610637,
+  "lat": 47.7910806,
+  "lon": 18.9588872,
+  "tags": {
+    "checkpoint": "hiking",
+    "checkpoint:type": "stamp",
+    "course": "Hollókőtől Vöröskőig",
+    "name": "Nagymaros-Visegrád",
+    "operator": "MÁV",
+    "public_transport": "station",
+    "railway": "halt",
+    "railway:name:VPE": "Nagymaros-Visegrád mh.",
+    "ref:mav": "298",
+    "train": "yes",
+    "uic_ref": "5510470",
+    "wikidata": "Q21866920",
+    "wikipedia": "hu:Nagymaros-Visegrád megállóhely"
+  }
+},
+{
+  "type": "node",
+  "id": 3352546153,
+  "lat": 47.7980670,
+  "lon": 18.9854830,
+  "tags": {
+    "mapillary": "3750997668356633",
+    "name": "Mátyás-forrás",
+    "natural": "spring",
+    "source": "turistautak.hu",
+    "url": "http://turistautak.hu/poi.php?id=49879",
+    "url:geocaching": "https://www.geocaching.hu/caches.geo?id=4858"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051131,
+  "lat": 47.8206330,
+  "lon": 18.9412000,
+  "tags": {
+    "alt_name": "Czerovszki-kő",
+    "ele": "214",
+    "historic": "memorial",
+    "material": "stone",
+    "name": "Czerovszki-emlék",
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "url": "http://turistautak.hu/poi.php?id=115575"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051153,
+  "lat": 47.7922760,
+  "lon": 18.9540240,
+  "tags": {
+    "disused:man_made": "water_well",
+    "heritage": "yes",
+    "name": "Fehérhegyi műemlék kerekeskút",
+    "note": "2024-08-30 - \"nem működik\"",
+    "source": "turistautak.hu",
+    "source:date": "2013-06-22",
+    "tourism": "attraction",
+    "url": "http://turistautak.hu/poi.php?id=152708"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051203,
+  "lat": 47.8215830,
+  "lon": 18.9691892,
+  "tags": {
+    "historic": "tomb",
+    "name": "Ismeretlen katona sírja",
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "tomb": "war_grave",
+    "url": "http://turistautak.hu/poi.php?id=110885"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051213,
+  "lat": 47.8216870,
+  "lon": 18.9693550,
+  "tags": {
+    "historic": "tomb",
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "tomb": "war_grave",
+    "url": "http://turistautak.hu/poi.php?id=107047"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051262,
+  "lat": 47.7872128,
+  "lon": 18.9560388,
+  "tags": {
+    "denomination": "roman_catholic",
+    "description": "állították: Jótevők",
+    "ele": "111",
+    "heritage": "3",
+    "historic": "wayside_cross",
+    "material": "stone",
+    "religion": "christian",
+    "start_date": "1887"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051501,
+  "lat": 47.7883490,
+  "lon": 18.9414660,
+  "tags": {
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "tourism": "viewpoint",
+    "url": "http://turistautak.hu/poi.php?id=96109"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051520,
+  "lat": 47.7920520,
+  "lon": 18.9461280,
+  "tags": {
+    "ele": "288",
+    "name": "Nagy korhadt fák kilátás",
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "tourism": "viewpoint",
+    "url": "http://turistautak.hu/poi.php?id=96110"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051521,
+  "lat": 47.7924120,
+  "lon": 18.9539250,
+  "tags": {
+    "historic": "wayside_cross",
+    "source": "turistautak.hu",
+    "source:date": "2013-06-22",
+    "url": "http://turistautak.hu/poi.php?id=152707"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051527,
+  "lat": 47.7946421,
+  "lon": 18.9585744,
+  "tags": {
+    "historic": "wayside_cross",
+    "source": "turistautak.hu",
+    "source:date": "2013-06-22",
+    "url": "http://turistautak.hu/poi.php?id=137866"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051546,
+  "lat": 47.8014200,
+  "lon": 18.9618300,
+  "tags": {
+    "description": "Kőkereszt",
+    "historic": "wayside_cross",
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "url": "http://turistautak.hu/poi.php?id=78746"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051552,
+  "lat": 47.8098670,
+  "lon": 18.9543000,
+  "tags": {
+    "survey:date": "2017-02-19",
+    "tourism": "viewpoint",
+    "url": "http://turistautak.hu/poi.php?id=14840"
+  }
+},
+{
+  "type": "node",
+  "id": 3439051567,
+  "lat": 47.8164530,
+  "lon": 18.9787700,
+  "tags": {
+    "historic": "wayside_cross",
+    "source": "turistautak.hu",
+    "source:date": "2014-10-16",
+    "url": "http://turistautak.hu/poi.php?id=9200"
+  }
+},
+{
+  "type": "node",
+  "id": 3439052222,
+  "lat": 47.7865790,
+  "lon": 18.9552873,
+  "tags": {
+    "artist_name": "Lukács István",
+    "historic": "memorial",
+    "memorial": "statue",
+    "name": "Árpád-házi Szent Erzsébet",
+    "ref:kozterkep": "24063",
+    "source": "turistautak.hu",
+    "source:date": "2013-06-22",
+    "url": "http://turistautak.hu/poi.php?id=142611"
+  }
+},
+{
+  "type": "node",
+  "id": 3441690514,
+  "lat": 47.7978689,
+  "lon": 18.9795363,
+  "tags": {
+    "alt_name": "A magyar Artúr kardja;Szent István-kori vármegyeszékhely emlékműve",
+    "artist_name": "Erdős Péter",
+    "historic": "memorial",
+    "inscription": "Vyssegrad civitas 1009 - Visegrád 2009. Állította: Szent György Lovagrend, lovag Erdős Péter tervei alapján 2009.",
+    "memorial": "stele",
+    "name": "Vyssegrad civitas 1009",
+    "ref:kozterkep": "24386",
+    "source": "turistautak.hu",
+    "source:date": "2014-02-06",
+    "start_date": "2009-08-20",
+    "url": "http://turistautak.hu/poi.php?id=124945"
+  }
+},
+{
+  "type": "node",
+  "id": 3441690559,
+  "lat": 47.7973141,
+  "lon": 18.9866367,
+  "tags": {
+    "historic": "memorial",
+    "name": "Görgey Artúr-emlékmű",
+    "source": "survey",
+    "survey:date": "2017-11-04",
+    "url": "http://turistautak.hu/poi.php?id=11227"
+  }
+},
+{
+  "type": "node",
+  "id": 3441690581,
+  "lat": 47.7798170,
+  "lon": 18.9829000,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Kisvasút emléktábla",
+    "source": "turistautak.hu",
+    "source:date": "2014-06-09",
+    "url": "http://turistautak.hu/poi.php?id=169160"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705094,
+  "lat": 47.7757095,
+  "lon": 18.9658008,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "wayside_cross",
+    "inscription": "Így szerette Isten a világot|Állíttatta Zeller Lipót és neje|1922. Március 19.",
+    "material": "stone",
+    "religion": "christian",
+    "start_date": "1922-03-19",
+    "url": "http://turistautak.hu/poi.php?id=174182"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705169,
+  "lat": 47.7913877,
+  "lon": 18.9730433,
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "23-29",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "email": "nfo@visegradmuzeum.hu",
+    "facebook": "https://www.facebook.com/visegradmuzeum/",
+    "fee": "yes",
+    "name": "Mátyás Király Múzeum",
+    "name:en": "King Mátyás Museum",
+    "opening_hours": "Tu-Su 09:00-17:00",
+    "phone": "+36 26 597 010",
+    "source": "turistautak.hu",
+    "source:date": "2014-02-18",
+    "tourism": "museum",
+    "url": "http://turistautak.hu/poi.php?id=54979",
+    "website": "https://visegradmuzeum.hu/palota2/",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705172,
+  "lat": 47.8153700,
+  "lon": 19.0038000,
+  "tags": {
+    "disused:amenity": "ferry_terminal",
+    "name": "Volt révállomás",
+    "source": "turistautak.hu",
+    "source:date": "2014-02-06",
+    "url": "http://turistautak.hu/poi.php?id=161330"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705719,
+  "lat": 47.7756880,
+  "lon": 18.9701950,
+  "tags": {
+    "ele": "174",
+    "source": "turistautak.hu",
+    "source:date": "2014-02-06",
+    "tourism": "viewpoint",
+    "url": "http://turistautak.hu/poi.php?id=163819"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705924,
+  "lat": 47.8026447,
+  "lon": 19.0086787,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Áprily Lajos emléktáblája",
+    "source": "turistautak.hu",
+    "source:date": "2013-08-18",
+    "url": "http://turistautak.hu/poi.php?id=158051"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705935,
+  "lat": 47.7919700,
+  "lon": 19.0199900,
+  "tags": {
+    "historic": "wayside_cross",
+    "name": "Öreg kálvária",
+    "source": "turistautak.hu",
+    "source:date": "2014-02-06",
+    "url": "http://turistautak.hu/poi.php?id=159275"
+  }
+},
+{
+  "type": "node",
+  "id": 3441705947,
+  "lat": 47.7830215,
+  "lon": 18.9706261,
+  "tags": {
+    "historic": "memorial",
+    "material": "stone",
+    "memorial": "stele",
+    "name": "1848-as emlékmű",
+    "source": "turistautak.hu",
+    "source:date": "2014-05-10",
+    "url": "http://turistautak.hu/poi.php?id=168369"
+  }
+},
+{
+  "type": "node",
+  "id": 3473873302,
+  "lat": 47.7973050,
+  "lon": 18.9821090,
+  "tags": {
+    "historic": "archaeological_site",
+    "name": "Esperesi templom romja",
+    "ruins": "yes",
+    "source": "turistautak.hu",
+    "source:date": "2014-02-06",
+    "url": "http://turistautak.hu/poi.php?id=49878"
+  }
+},
+{
+  "type": "node",
+  "id": 3502836919,
+  "lat": 47.7878071,
+  "lon": 18.9737096,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "name": "XIV. stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 3712736910,
+  "lat": 47.7908952,
+  "lon": 18.9578365,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Dr. Takács József-emléktábla"
+  }
+},
+{
+  "type": "node",
+  "id": 3712736911,
+  "lat": 47.7913535,
+  "lon": 18.9610109,
+  "tags": {
+    "direction": "20",
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Kitelepített sváb lakosok"
+  }
+},
+{
+  "type": "node",
+  "id": 3712765941,
+  "lat": 47.8014126,
+  "lon": 18.9648953,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "wayside_cross",
+    "material": "stone",
+    "religion": "christian",
+    "start_date": "1770"
+  }
+},
+{
+  "type": "node",
+  "id": 3712765962,
+  "lat": 47.7942209,
+  "lon": 18.9632528,
+  "tags": {
+    "historic": "memorial",
+    "name": "Árvízi emlékmű"
+  }
+},
+{
+  "type": "node",
+  "id": 3725320046,
+  "lat": 47.7891730,
+  "lon": 18.9575589,
+  "tags": {
+    "artist_name": "Lukács István",
+    "ele": "115",
+    "historic": "memorial",
+    "memorial": "statue",
+    "name": "Szent István és Gizella",
+    "ref:kozterkep": "2746",
+    "start_date": "2001-08-20"
+  }
+},
+{
+  "type": "node",
+  "id": 3725328280,
+  "lat": 47.7857672,
+  "lon": 18.9593436,
+  "tags": {
+    "description": "Dám (Loreley) - ma Széchenyi pihenő",
+    "direction": "25-220",
+    "ele": "105",
+    "name": "„Loreley” kilátópont (Dám)",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 3725341665,
+  "lat": 47.7885822,
+  "lon": 18.9611217,
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:postcode": "2626",
+    "addr:street": "Fő tér",
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Nagymaros hajóállomás",
+    "public_transport": "station",
+    "website": "https://www.mahartports.hu/hu/kikotok/videki-kikotok/nagymaros"
+  }
+},
+{
+  "type": "node",
+  "id": 3747534720,
+  "lat": 47.7940883,
+  "lon": 18.9636105,
+  "tags": {
+    "direction": "30-120",
+    "name": "kilátás a Visegrádi várra",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 3767576612,
+  "lat": 47.8016643,
+  "lon": 18.9630214,
+  "tags": {
+    "cemetery": "grave",
+    "denomination": "roman_catholic",
+    "historic": "wayside_shrine",
+    "name": "Dóczy Ilona, tanítónő",
+    "religion": "christian",
+    "remark": "1877-1958"
+  }
+},
+{
+  "type": "node",
+  "id": 3767576613,
+  "lat": 47.8026036,
+  "lon": 18.9633523,
+  "tags": {
+    "cemetery": "grave",
+    "denomination": "roman_catholic",
+    "historic": "wayside_shrine",
+    "name": "Nagyné Marika",
+    "religion": "christian",
+    "remark": "????-2014"
+  }
+},
+{
+  "type": "node",
+  "id": 3767576614,
+  "lat": 47.8016308,
+  "lon": 18.9629543,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "wayside_cross",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 3768407008,
+  "lat": 47.7982007,
+  "lon": 18.9432843,
+  "tags": {
+    "denomination": "roman_catholic",
+    "ele": "285",
+    "historic": "wayside_cross",
+    "material": "stone",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 3825232799,
+  "lat": 47.7813234,
+  "lon": 18.9816478,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "Visegrád, Mátyás Király utca 59.",
+    "public_transport": "platform",
+    "verified": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3836286197,
+  "lat": 47.7877568,
+  "lon": 19.0121107,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 3836357274,
+  "lat": 47.8020064,
+  "lon": 18.9891381,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 3905334286,
+  "lat": 47.7966307,
+  "lon": 18.9763216,
+  "tags": {
+    "access": "yes",
+    "architect": "Schulek János",
+    "architect:wikidata": "Q1286277",
+    "historic": "city_gate",
+    "inscription": "Visegrád 1323-2023 Királyi Székhely",
+    "start_date": "1938",
+    "wikimedia_commons": "Category:Városkapu, Visegrád"
+  }
+},
+{
+  "type": "node",
+  "id": 4035217658,
+  "lat": 47.7936640,
+  "lon": 18.9793150,
+  "tags": {
+    "historic": "wayside_cross",
+    "mapillary": "300884401573797",
+    "name": "DE Genere Zách kereszt"
+  }
+},
+{
+  "type": "node",
+  "id": 4035217660,
+  "lat": 47.7936040,
+  "lon": 18.9791400,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "„Itt állt az a vasból készült emlékkereszt, amelyet 1869-ben az itt tartott országos ünnepség keretében – a tragikus végű Zách-család emlékezetére Viktorin József, Visegrád akkori plébánosa emeltetett.”",
+    "mapillary": "1118017682037676",
+    "name": "Viktorin-emlékmű",
+    "ref:kozterkep": "866",
+    "source": "turistautak.hu;survey",
+    "url": "http://turistautak.hu/poi.php?id=115011"
+  }
+},
+{
+  "type": "node",
+  "id": 4450864916,
+  "lat": 47.7945937,
+  "lon": 18.9483830,
+  "tags": {
+    "name": "Szép kilátás!",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 4541302991,
+  "lat": 47.7942295,
+  "lon": 18.9636239,
+  "tags": {
+    "historic": "memorial",
+    "name": "Maibaum Nagymaroson"
+  }
+},
+{
+  "type": "node",
+  "id": 4703480016,
+  "lat": 47.8062424,
+  "lon": 19.0099466,
+  "tags": {
+    "historic": "memorial",
+    "material": "steel",
+    "memorial": "plaque",
+    "name": "Ár víz",
+    "name:en": "floods"
+  }
+},
+{
+  "type": "node",
+  "id": 4829466829,
+  "lat": 47.7859413,
+  "lon": 18.9670011,
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:postcode": "2025",
+    "contact:fax": "+36 26 597 065",
+    "contact:mobile": "+36 70 930 5754",
+    "contact:phone": "+36 26 398 344",
+    "name": "Rév jegypénztár",
+    "payment:debit_cards": "yes",
+    "shop": "ticket"
+  }
+},
+{
+  "type": "node",
+  "id": 4841227599,
+  "lat": 47.7942610,
+  "lon": 18.9796530,
+  "tags": {
+    "direction": "280",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 4841227600,
+  "lat": 47.7943728,
+  "lon": 18.9796007,
+  "tags": {
+    "direction": "290",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 5022907632,
+  "lat": 47.7888264,
+  "lon": 18.9598208,
+  "tags": {
+    "artist_name": "Seregi György",
+    "description": "Ereklyés országzászló: Magyarország minden történelmi vármegyéjéből földet helyeztek el a zászló talpazatába.",
+    "historic": "memorial",
+    "man_made": "flagpole",
+    "memorial": "war_memorial",
+    "name": "Országzászló, Trianon-emlékmű",
+    "ref:kozterkep": "4488",
+    "start_date": "2007"
+  }
+},
+{
+  "type": "node",
+  "id": 5022907633,
+  "lat": 47.7888788,
+  "lon": 18.9601728,
+  "tags": {
+    "artist_name": "Kamotsay István",
+    "historic": "memorial",
+    "memorial": "bust",
+    "name": "Kittenberger Kálmán",
+    "ref:kozterkep": "15034",
+    "start_date": "1971-09-05"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015813,
+  "lat": 47.7892268,
+  "lon": 18.9553335,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "IV. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015814,
+  "lat": 47.7893724,
+  "lon": 18.9551927,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "VI. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015815,
+  "lat": 47.7894422,
+  "lon": 18.9551140,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "VII. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015816,
+  "lat": 47.7891847,
+  "lon": 18.9554163,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "III. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015817,
+  "lat": 47.7896122,
+  "lon": 18.9549543,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "IX. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015818,
+  "lat": 47.7896987,
+  "lon": 18.9548684,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "X. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015819,
+  "lat": 47.7897848,
+  "lon": 18.9547719,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "XI. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025015820,
+  "lat": 47.7898574,
+  "lon": 18.9546907,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "XII. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025016821,
+  "lat": 47.7899428,
+  "lon": 18.9545954,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "XIII. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025016822,
+  "lat": 47.7900336,
+  "lon": 18.9545303,
+  "tags": {
+    "ele": "160",
+    "historic": "wayside_shrine",
+    "name": "XIV. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025016823,
+  "lat": 47.7892971,
+  "lon": 18.9552618,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "V. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025016824,
+  "lat": 47.7891391,
+  "lon": 18.9555108,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "II. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025016825,
+  "lat": 47.7891010,
+  "lon": 18.9556137,
+  "tags": {
+    "ele": "125",
+    "historic": "wayside_shrine",
+    "name": "I. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5025016826,
+  "lat": 47.7895353,
+  "lon": 18.9550269,
+  "tags": {
+    "historic": "wayside_shrine",
+    "name": "VIII. Stáció",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 5095053967,
+  "lat": 47.7936765,
+  "lon": 18.9793408,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 5218821204,
+  "lat": 47.7893718,
+  "lon": 18.9571090,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "wayside_cross",
+    "inscription": "1861-ben emeltette Josef Emerisch és családja, \"hálából bűneink megváltásáért\". / 1932-ben renoválták.",
+    "material": "concrete",
+    "ref:kozterkep": "4493",
+    "religion": "christian",
+    "start_date": "1861"
+  }
+},
+{
+  "type": "node",
+  "id": 5238226615,
+  "lat": 47.7891988,
+  "lon": 18.9581343,
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "1848/4",
+    "addr:postcode": "2626",
+    "addr:street": "Fő tér",
+    "denomination": "roman_catholic",
+    "description": "Késő barokk, 1800. Renoválva 1931-ben. Kettős talapzaton kőkereszt, kő corpus-szal. a talapzat homloksíkjában építési felirat: 1800. A kereszt anyaga süttői tömött vörös mészkő, a korpusz festett homokkő",
+    "heritage": "2",
+    "historic": "wayside_cross",
+    "inscription": "Dieses Kreutz hat zur Ehre Gottes Im Tausend udn achtHunderten Jahr...",
+    "inscription:hu": "1800-ban állítatta Joseph Schutz és Michael Rixer, aki \"Markt Marosch\" (vagyis Maros mezőváros bírója) / \"Renoválta 1931-ben özv. Mejts Ferencné\"",
+    "material": "stone",
+    "ref": "Műemléki azonosító: 7179 törzsszám: 7147",
+    "ref:kozterkep": "4494",
+    "religion": "christian",
+    "start_date": "1880",
+    "website": "https://muemlekem.hu/muemlek/show/7179"
+  }
+},
+{
+  "type": "node",
+  "id": 5238226618,
+  "lat": 47.7905855,
+  "lon": 18.9537738,
+  "tags": {
+    "name": "Kálvária-domb",
+    "place": "locality",
+    "source": "Nagymaros HÉSZ: 17/2002, 13/2009 Önk.Rend."
+  }
+},
+{
+  "type": "node",
+  "id": 5263075460,
+  "lat": 47.7889191,
+  "lon": 18.9600061,
+  "tags": {
+    "artist_name": "Szervátiusz Tibor",
+    "historic": "memorial",
+    "inscription": "(középen Piéta-jelenet, két oldalt az áldozatok névsora)",
+    "material": "stone",
+    "memorial": "war_memorial",
+    "memorial:conflict": "1956",
+    "name": "Világháborús és 1956-os emlékmű",
+    "ref:kozterkep": "4495",
+    "start_date": "1994-10-29",
+    "subject:wikidata": "Q164348"
+  }
+},
+{
+  "type": "node",
+  "id": 5263170438,
+  "lat": 47.7858433,
+  "lon": 18.9594807,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "Helyreállíttatta: Virágos Nagymarosért Társadalmi Egyesület. Szent István napjára 1997.",
+    "material": "stone",
+    "memorial": "statue",
+    "name": "Nepomuki Szent János",
+    "ref:kozterkep": "17456",
+    "start_date": "1897"
+  }
+},
+{
+  "type": "node",
+  "id": 5263195969,
+  "lat": 47.7888546,
+  "lon": 18.9595096,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "MAGYARORSZÁG EZER ÉVES FENNÁLLÁSÁNAK EMLÉKÉRE / 1896 / NAGY-MAROS",
+    "material": "stone",
+    "memorial": "stele",
+    "name": "Millenniumi emlékmű",
+    "ref:kozterkep": "4485",
+    "start_date": "1896"
+  }
+},
+{
+  "type": "node",
+  "id": 5323883866,
+  "lat": 47.7872624,
+  "lon": 18.9832109,
+  "tags": {
+    "name": "korall kilátóhely",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 5324451516,
+  "lat": 47.7914987,
+  "lon": 18.9741551,
+  "tags": {
+    "amenity": "fountain",
+    "artist_name": "Giovanni Dalmata",
+    "name": "Herkules kút",
+    "name:en": "Hercules Fountain",
+    "ref:kozterkep": "1484"
+  }
+},
+{
+  "type": "node",
+  "id": 5455158976,
+  "lat": 47.8014923,
+  "lon": 18.9630874,
+  "tags": {
+    "historic": "tomb"
+  }
+},
+{
+  "type": "node",
+  "id": 5455158977,
+  "lat": 47.8017582,
+  "lon": 18.9626057,
+  "tags": {
+    "historic": "tomb"
+  }
+},
+{
+  "type": "node",
+  "id": 5455158980,
+  "lat": 47.8026406,
+  "lon": 18.9629783,
+  "tags": {
+    "historic": "tomb"
+  }
+},
+{
+  "type": "node",
+  "id": 5586460182,
+  "lat": 47.7943821,
+  "lon": 18.9974302,
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "name": "Szent Mihály erdei kápolna",
+    "religion": "christian",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 5697426502,
+  "lat": 47.7938977,
+  "lon": 18.9799855,
+  "tags": {
+    "name": "Panoptikum",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "node",
+  "id": 6074837999,
+  "lat": 47.7814322,
+  "lon": 18.9812422,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "Visegrád, Mátyás Király utca 59.",
+    "public_transport": "platform",
+    "verified": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6074838000,
+  "lat": 47.7936488,
+  "lon": 18.9831170,
+  "tags": {
+    "bench": "no",
+    "bin": "no",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "Visegrád, Fellegvár",
+    "public_transport": "platform",
+    "shelter": "no",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6074838001,
+  "lat": 47.7934885,
+  "lon": 18.9828542,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "Visegrád, Fellegvár",
+    "public_transport": "platform",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6074838005,
+  "lat": 47.7908131,
+  "lon": 18.9711478,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "Visegrád, Királyi Palota",
+    "network": "Volánbusz",
+    "network:wikidata": "Q746503",
+    "network:wikipedia": "hu:Volánbusz",
+    "operator": "Volánbusz",
+    "public_transport": "platform",
+    "shelter": "no",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6406067145,
+  "lat": 47.7948552,
+  "lon": 18.9752421,
+  "tags": {
+    "fixme": "name?",
+    "historic": "memorial",
+    "mapillary": "579783282998436",
+    "memorial": "bust"
+  }
+},
+{
+  "type": "node",
+  "id": 6406067146,
+  "lat": 47.7935245,
+  "lon": 18.9742215,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Dr. Zsitvay Tibor"
+  }
+},
+{
+  "type": "node",
+  "id": 7573330608,
+  "lat": 47.7757762,
+  "lon": 18.9658879,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "A mi urainknak, Valentinianusnak, Valensnek és Gratianusnak, a legnagyobb császároknak fejedelmi parancsára, .. Foscanus, a Marsról elnevezett I. számú legio parancsnoka .. ezt az őrtornyot .. felépítette Modestus és Arinthaleus .. konzulsága idején",
+    "material": "stone",
+    "memorial": "stone",
+    "name": "Római Őrtorony"
+  }
+},
+{
+  "type": "node",
+  "id": 7600467585,
+  "lat": 47.7840419,
+  "lon": 18.9781258,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "obelisk"
+  }
+},
+{
+  "type": "node",
+  "id": 7696343479,
+  "lat": 47.8063767,
+  "lon": 19.0101418,
+  "tags": {
+    "artist_name": "NJ",
+    "historic": "memorial",
+    "material": "wood",
+    "memorial": "statue",
+    "name": "Álmos fia Árpád Honfoglalás főfejedelme",
+    "start_date": "2001"
+  }
+},
+{
+  "type": "node",
+  "id": 8712691303,
+  "lat": 47.7884564,
+  "lon": 18.9609821,
+  "tags": {
+    "artwork_type": "statue",
+    "description": "18.szd-i német telepesek jöttek Rajna-Mainz vidékéről. Hajóik prototípusa az ulmi skatulya. Fa tutaj tetővel, makett.",
+    "historic": "memorial",
+    "material": "wood",
+    "memorial": "statue",
+    "name": "Ulmi skatulya",
+    "name:de": "Ulmer Schachtel",
+    "tourism": "artwork",
+    "url": "https://dunaiszigetek.blogspot.com/2013/01/ulmi-skatulyak.html",
+    "wikidata": "Q2475383",
+    "wikipedia": "de:Ulmer Schachtel"
+  }
+},
+{
+  "type": "node",
+  "id": 8958121467,
+  "lat": 47.7869348,
+  "lon": 18.9797729,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "Balassa Gyula Panoráma-út \nErdészek tervezték-Erdészek építették 1964",
+    "material": "stone",
+    "memorial": "plaque"
+  }
+},
+{
+  "type": "node",
+  "id": 9108141590,
+  "lat": 47.7957551,
+  "lon": 18.9589323,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "Ebben az utcában lakott lete utolsó éveiben",
+    "material": "stone",
+    "memorial": "plaque",
+    "name": "Pállya Celesztin"
+  }
+},
+{
+  "type": "node",
+  "id": 9580637356,
+  "lat": 47.7997985,
+  "lon": 18.9794728,
+  "tags": {
+    "description": "Latin nyelvű emléktábla, a Duna-parti út elkészültét örökíti meg.",
+    "historic": "memorial",
+    "location": "overhead",
+    "material": "marble",
+    "memorial": "plaque",
+    "note": "Az út melletti sziklafalon, kb.10m magasan van. Nyáron eltakarhatja a növényzet.",
+    "source": "survey",
+    "start_date": "1820"
+  }
+},
+{
+  "type": "node",
+  "id": 9647013940,
+  "lat": 47.8043897,
+  "lon": 18.9981175,
+  "tags": {
+    "description": "LIMES Pannonia, római kori erőd",
+    "ele": "128",
+    "historic": "ruins",
+    "historic:civilization": "ancient_roman",
+    "material": "stone",
+    "name": "Burgus Solva 28.",
+    "name:en": "Limes: , late Roman castellum, Dunabogdány-Szentgyörgypuszta",
+    "opening_hours": "24/7",
+    "ref": "Műemléki védelem, azonosító:",
+    "ruins": "yes",
+    "source": "https://hu.wikipedia.org/wiki/Dunabogd%C3%A1ny",
+    "wheelchair": "limited",
+    "wikidata": "Q471153",
+    "wikipedia": "hu:A római limes magyarországi szakaszai"
+  }
+},
+{
+  "type": "node",
+  "id": 9647051737,
+  "lat": 47.8042493,
+  "lon": 18.9980851,
+  "tags": {
+    "addr:conscriptionnumber": "1503",
+    "archaeological_site": "fortification",
+    "description": "Visegrád Szent György puszta",
+    "historic": "archaeological_site",
+    "historic:civilization": "ancient_roman",
+    "name": "Szent György puszta",
+    "ref": "58667 kiemelten védett régészeti lelőhely",
+    "url": "https://oroksegvedelem.e-epites.hu/index.php?hrsz=1503&telepules=11756&results=25",
+    "website": "https://archeodatabase.hnm.hu/hu/node/64561"
+  }
+},
+{
+  "type": "node",
+  "id": 9933087383,
+  "lat": 47.7874978,
+  "lon": 18.9678062,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque"
+  }
+},
+{
+  "type": "node",
+  "id": 10091590655,
+  "lat": 47.7983487,
+  "lon": 18.9789636,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 10143904363,
+  "lat": 47.7890089,
+  "lon": 18.9599590,
+  "tags": {
+    "artwork_type": "bust",
+    "historic": "memorial",
+    "memorial": "bust",
+    "name": "Pállya Celesztin",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 10222324022,
+  "lat": 47.7859545,
+  "lon": 18.9699970,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Trianon"
+  }
+},
+{
+  "type": "node",
+  "id": 10224934139,
+  "lat": 47.7837947,
+  "lon": 18.9711796,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "Fájdalmak anyjai légy oltalmunk",
+    "material": "stone",
+    "memorial": "plaque"
+  }
+},
+{
+  "type": "node",
+  "id": 10255007683,
+  "lat": 47.7891847,
+  "lon": 18.9614365,
+  "tags": {
+    "addr:postcode": "2626",
+    "addr:street": "Béla király sétány",
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Nagymaros",
+    "public_transport": "station",
+    "website": "https://kompok-revek.hu/revatkelok/dunai-komp/visegrad-nagymaros/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10907460578,
+  "lat": 47.7955858,
+  "lon": 18.9922692,
+  "tags": {
+    "direction": "0-360",
+    "ele": "378",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 11452021644,
+  "lat": 47.7896088,
+  "lon": 18.9471943,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 11831299953,
+  "lat": 47.7880163,
+  "lon": 18.9737512,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "memorial",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 12479284178,
+  "lat": 47.7880851,
+  "lon": 18.9833611,
+  "tags": {
+    "fixme": "resurvey",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 12533850341,
+  "lat": 47.7874282,
+  "lon": 18.9603406,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "plaque",
+    "name": "Szabados György"
+  }
+},
+{
+  "type": "node",
+  "id": 12553753288,
+  "lat": 47.8000628,
+  "lon": 18.9937875,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "\"Bármi is történik a pilisi erdők jövő tavasszal is kizöldülnek\" Dr. Madas László",
+    "memorial": "stele",
+    "name": "Pilisi parkerdő rt.",
+    "start_date": "1969"
+  }
+},
+{
+  "type": "node",
+  "id": 12553782809,
+  "lat": 47.7988777,
+  "lon": 18.9935562,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "Kutyák fája",
+    "material": "wood",
+    "memorial": "stele",
+    "name": "Kutyák fája"
+  }
+},
+{
+  "type": "node",
+  "id": 12554014971,
+  "lat": 47.7807879,
+  "lon": 19.0072221,
+  "tags": {
+    "historic": "memorial",
+    "name": "Bergmann Károly emlékhely"
+  }
+},
+{
+  "type": "node",
+  "id": 12748141681,
+  "lat": 47.7935336,
+  "lon": 18.9423143,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "Pali 2013",
+    "material": "wood",
+    "memorial": "plaque"
+  }
+},
+{
+  "type": "node",
+  "id": 12862510175,
+  "lat": 47.7955669,
+  "lon": 18.9921764,
+  "tags": {
+    "changing_table": "no",
+    "museum": "person",
+    "museum_type": "municipal",
+    "name": "Dr. Zsitvay Tibor",
+    "subject:wikidata": "Q7800519",
+    "toilets": "no",
+    "toilets:wheelchair": "no",
+    "tourism": "museum",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 13123259569,
+  "lat": 47.7903161,
+  "lon": 18.9587586,
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:housenumber": "24",
+    "addr:postcode": "2626",
+    "addr:street": "Magyar utca",
+    "amenity": "restaurant",
+    "contact:website": "https://nagymaros.hu/matyas-etkezde/",
+    "name": "Mátyás étkezde",
+    "opening_hours": "Mo-Fr 12:00-14:00"
+  }
+},
+{
+  "type": "node",
+  "id": 13123259579,
+  "lat": 47.7857155,
+  "lon": 18.9547900,
+  "tags": {
+    "historic": "memorial",
+    "inscription": "PaszingerJános erdész",
+    "memorial": "plaque"
+  }
+},
+{
+  "type": "node",
+  "id": 13626729155,
+  "lat": 47.8001392,
+  "lon": 19.0174067,
+  "tags": {
+    "historic": "wayside_cross"
+  }
+},
+{
+  "type": "node",
+  "id": 13646036991,
+  "lat": 47.7862422,
+  "lon": 18.9672353,
+  "tags": {
+    "checkpoint": "cycling",
+    "checkpoint:type": "app",
+    "course": "Horizont",
+    "name": "Horizont - Visegrádi révkikötő",
+    "operator": "Maketusz",
+    "tourism": "checkpoint",
+    "website": "https://horizontbike.hu/"
+  }
+},
+{
+  "type": "node",
+  "id": 13712627952,
+  "lat": 47.8097176,
+  "lon": 18.9526572,
+  "tags": {
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 13849831357,
+  "lat": 47.7983039,
+  "lon": 18.9431092,
+  "tags": {
+    "denomination": "roman_catholic",
+    "historic": "wayside_cross",
+    "inscription": "Ach mein gekreuzigter Herr Jesu Christ! Der für mich an dem heil. Kreutz gestorben ist. Und wenn ich kom vor das letzte Gericht. Herr Jesu Christ verdam mich nicht.",
+    "note": "Inscription is in German",
+    "panoramax": "0dd19e32-4e5c-4348-a2ef-457665892541",
+    "religion": "christian",
+    "start_date": "1880",
+    "subject:wikidata": "Q302"
+  }
+},
+{
+  "type": "way",
+  "id": 19797422,
+  "center": {
+    "lat": 47.8065060,
+    "lon": 19.0100925
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "tertiary",
+    "name": "Rév utca",
+    "ref": "11317",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 21255494,
+  "center": {
+    "lat": 47.8059916,
+    "lon": 19.0096567
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "residential",
+    "name": "Rév utca",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 25697702,
+  "center": {
+    "lat": 47.7860642,
+    "lon": 18.9676021
+  },
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "highway": "tertiary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "Rév utca",
+    "ref": "11116",
+    "smoothness": "good",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 26490621,
+  "center": {
+    "lat": 47.7856287,
+    "lon": 18.9722960
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "name": "Kálvária utca",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 35154519,
+  "center": {
+    "lat": 47.7939363,
+    "lon": 18.9741767
+  },
+  "tags": {
+    "access": "permissive",
+    "class:bicycle:touring": "1",
+    "highway": "residential",
+    "name": "Salamontorony utca",
+    "sidewalk": "no",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 40268145,
+  "center": {
+    "lat": 47.8050714,
+    "lon": 19.0089114
+  },
+  "tags": {
+    "dog": "leashed",
+    "duration": "00:10",
+    "fee": "yes",
+    "ferry": "regular",
+    "from": "Visegrád-Szentgyörgypuszta",
+    "horse": "no",
+    "motor_vehicle": "no",
+    "name": "Kisoroszi-Szentgyörgypuszta gyalogrév",
+    "operator": "Magyar Révhajósok Egyesülete",
+    "route": "ferry",
+    "to": "Kisoroszi",
+    "website": "https://kompok-revek.hu/revatkelok/dunai-komp/kisoroszi-szentgyorgypuszta-komp/",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 40324630,
+  "center": {
+    "lat": 47.8248449,
+    "lon": 19.0138433
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Rév út",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 45324838,
+  "center": {
+    "lat": 47.7818492,
+    "lon": 18.9780083
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "cycleway:both": "shared_lane",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Mátyás király utca",
+    "ref": "11116",
+    "smoothness": "good",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 45325926,
+  "center": {
+    "lat": 47.7782056,
+    "lon": 18.9841948
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "cycleway:both": "shared_lane",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Mátyás király utca",
+    "ref": "11116",
+    "smoothness": "excellent",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 45765788,
+  "center": {
+    "lat": 47.7862911,
+    "lon": 18.9717634
+  },
+  "tags": {
+    "handrail": "no",
+    "highway": "steps",
+    "incline": "up",
+    "name": "Kálvária lépcső",
+    "ramp": "no",
+    "surface": "cobblestone",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 76897202,
+  "center": {
+    "lat": 47.7889414,
+    "lon": 18.9553323
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Kálvária utca",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 121239989,
+  "center": {
+    "lat": 47.7936671,
+    "lon": 18.9803178
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:conscriptionnumber": "0125/5, 0125/16, 0125/17, 0125/18, 0125/19",
+    "addr:place": "Várhegy",
+    "addr:postcode": "2025",
+    "alt_name": "Visegrádi vár",
+    "castle_type": "defensive",
+    "contact:phone": "+36 26 398 101",
+    "description": "Fellegvár. 13. sz.-i eredetű hegyi vár, királyi tulajdonban. Fallal és kaputoronnyal védett lakópalota és öregtorony. A 14. sz.-ban bővítették két periódusban, újabb falövvel és alsó várudvarral.",
+    "fee": "yes",
+    "historic": "castle",
+    "image": "https://image.ibb.co/f4DgvS/IMG_3035.jpg",
+    "name": "Visegrádi fellegvár",
+    "name:ca": "Castell de Visegrád",
+    "name:en": "Visegrád Citadel",
+    "ref": "Műemléki védelem, azonosító: 7612;törzsszám: 9945",
+    "start_date": "1246",
+    "tourism": "attraction",
+    "url:muemlekem": "https://muemlekem.hu/muemlek/show/7612",
+    "website": "http://www.parkerdo.hu/visegradi_var",
+    "wheelchair": "no",
+    "wikidata": "Q1460281",
+    "wikipedia": "hu:Visegrádi vár"
+  }
+},
+{
+  "type": "way",
+  "id": 121239994,
+  "center": {
+    "lat": 47.7957117,
+    "lon": 18.9753580
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:postcode": "2025",
+    "amenity": "ferry_terminal",
+    "cargo": "passengers",
+    "ferry": "yes",
+    "name": "Visegrád hajóállomás",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 121239995,
+  "center": {
+    "lat": 47.7834755,
+    "lon": 18.9717578
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "11",
+    "addr:postcode": "2025",
+    "addr:street": "Széchenyi utca",
+    "amenity": "community_centre",
+    "building": "yes",
+    "name": "Mátyás király művelődési ház"
+  }
+},
+{
+  "type": "way",
+  "id": 121239999,
+  "center": {
+    "lat": 47.7859396,
+    "lon": 18.9690693
+  },
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "Rév utca",
+    "ref": "11116",
+    "smoothness": "good",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 121240004,
+  "center": {
+    "lat": 47.7933407,
+    "lon": 18.9809268
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 121240965,
+  "center": {
+    "lat": 47.7938436,
+    "lon": 18.9799822
+  },
+  "tags": {
+    "building": "castle",
+    "castle_type": "defensive",
+    "fee": "yes",
+    "historic": "castle",
+    "name": "Vármúzeum",
+    "name:ca": "edifici del museu del Castell de Visegrád",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 121241818,
+  "center": {
+    "lat": 47.7964025,
+    "lon": 18.9771583
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "defensive",
+    "date": "13. szd. közepe",
+    "height": "20",
+    "heritage": "2",
+    "historic": "castle",
+    "man_made": "tower",
+    "material": "stone;concrete",
+    "name": "Salamon torony",
+    "name:de": "Salomon-Turm",
+    "tourism": "attraction",
+    "tower:type": "observation",
+    "url:muemlekem": "https://muemlekem.hu/muemlek/show/7606",
+    "website": "https://visegradmuzeum.hu/salamon-torony-zaras/"
+  }
+},
+{
+  "type": "way",
+  "id": 164950625,
+  "center": {
+    "lat": 47.7964837,
+    "lon": 18.9760584
+  },
+  "tags": {
+    "heritage:website": "https://www.oeny.hu/oeny/eorok/public/monument/16130",
+    "name": "Vízibástya",
+    "tourism": "attraction",
+    "wikimedia_commons": "Category:Water Bastion, Visegrád"
+  }
+},
+{
+  "type": "way",
+  "id": 164950626,
+  "center": {
+    "lat": 47.7906742,
+    "lon": 18.9708093
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "denomination": "roman_catholic",
+    "name": "Mária-kápolna",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 165624743,
+  "center": {
+    "lat": 47.7979569,
+    "lon": 18.9806583
+  },
+  "tags": {
+    "barrier": "wall",
+    "date": "Kr.u. 1009",
+    "height": "1",
+    "historic": "ruins",
+    "material": "stone",
+    "name": "Ispáni palota",
+    "ruins": "yes",
+    "wall": "stone",
+    "wikipedia": "hu:A római limes magyarországi szakaszai"
+  }
+},
+{
+  "type": "way",
+  "id": 165624810,
+  "center": {
+    "lat": 47.7982102,
+    "lon": 18.9801079
+  },
+  "tags": {
+    "alt_name": "Sibrik-dombi erőd",
+    "archaeological_site": "fortification",
+    "fortification_type": "limes",
+    "historic": "archaeological_site",
+    "historic:civilization": "western_roman",
+    "name": "\"Ponte Navata\" római erőd",
+    "url": "http://dare.ht.lu.se/places/10855.html",
+    "url:muemlekem": "https://muemlekem.hu/muemlek/show/7611",
+    "wikidata": "Q647481",
+    "wikipedia": "hu:Pone Navata"
+  }
+},
+{
+  "type": "way",
+  "id": 165625180,
+  "center": {
+    "lat": 47.7756906,
+    "lon": 18.9659028
+  },
+  "tags": {
+    "addr:conscriptionnumber": "189/3, 190, 189/4",
+    "alt_name": "Burgus Solva 24",
+    "archaeological_site": "fortification",
+    "description": "Római őrtorony helyreállított falmaradványai 372-ből. Késő római kori négyzetes alaprajzú 1,05 m falvastagságú 9*9 m alapterületű őrtorony. Bejárati ajtaja a Duna felőli oldalon van. Alapfalai az 1950-es években helyreállításra kerültek.",
+    "designation": "late Roman watchtower (Burgus Solva 24)",
+    "fortification_type": "limes",
+    "heritage": "2",
+    "historic": "archaeological_site",
+    "historic:civilization": "western_roman",
+    "name": "Burgus Solva 24, római őrtorony",
+    "ref": "Műemléki védelem azonosító: 7610; törzsszám: 8794",
+    "start_date": "372",
+    "url": "http://muemlekem.hu/muemlek/show/7610",
+    "wikidata": "Q1678257",
+    "wikipedia": "de:Kleinkastell Visegrád-Gizellamajor"
+  }
+},
+{
+  "type": "way",
+  "id": 170750994,
+  "center": {
+    "lat": 47.7979425,
+    "lon": 18.9810213
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "height": "1",
+    "historic": "ruins",
+    "mapillary": "466471157755863",
+    "wall": "stone"
+  }
+},
+{
+  "type": "way",
+  "id": 170750996,
+  "center": {
+    "lat": 47.7973444,
+    "lon": 18.9793946
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "no",
+    "name": "Salamon-torony parkolója",
+    "parking": "surface"
+  }
+},
+{
+  "type": "way",
+  "id": 170753669,
+  "center": {
+    "lat": 47.7918072,
+    "lon": 18.9726913
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "4-6",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "fee": "yes",
+    "leisure": "playground",
+    "name": "Mátyás király történelmi mesekert",
+    "payment:debit_cards": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 170753670,
+  "center": {
+    "lat": 47.7958131,
+    "lon": 18.9766952
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "service",
+    "motor_vehicle": "private",
+    "name": "Salamontorony utca",
+    "smoothness": "intermediate",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 170753671,
+  "center": {
+    "lat": 47.7970781,
+    "lon": 18.9796354
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "service",
+    "motor_vehicle": "permissive",
+    "name": "Salamontorony utca",
+    "smoothness": "intermediate",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 170754735,
+  "center": {
+    "lat": 47.7944887,
+    "lon": 18.9751119
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "residential",
+    "lanes": "1",
+    "lit": "yes",
+    "name": "Salamontorony utca",
+    "smoothness": "bad",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 175415634,
+  "center": {
+    "lat": 47.7929108,
+    "lon": 18.9923762
+  },
+  "tags": {
+    "attraction": "summer_toboggan",
+    "building": "yes",
+    "check_date:opening_hours": "2018-10-22",
+    "contact:email": "visegrad@bobozas.hu",
+    "contact:facebook": "https://www.facebook.com/visegradibobpalya",
+    "contact:instagram": "https://www.instagram.com/visegradi_bobpalya/",
+    "contact:phone": "+36 26 397 397;+36 26 398 169",
+    "contact:website": "http://visegrad.bobozas.hu",
+    "name": "Visegrádi Bobpálya",
+    "name:en": "Visegrád Toboggan Park",
+    "opening_hours": "Nov-Feb: Mo-Su,PH 11:00-16:00; Mar: Mo-Fr 11:00-16:00; Mar: Sa-Su,PH 10:00-17:00; Apr,Sep,Oct: Mo-Fr 10:00-17:00; Apr,Sep,Oct: Sa-Su,PH 10:00-18:00; May-Aug: Mo-Fr 09:00-18:00; May-Aug: Sa-Su,PH 09:00-19:00",
+    "opening_hours:url": "http://visegrad.bobozas.hu/hu/nyitvatartas",
+    "payment:maestro": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 182443260,
+  "center": {
+    "lat": 47.7931431,
+    "lon": 18.9855111
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "2",
+    "addr:postcode": "2025",
+    "addr:street": "Panoráma út",
+    "air_conditioning": "yes",
+    "building": "hotel",
+    "building:colour": "white",
+    "building:levels": "6",
+    "email": "info@hotelsilvanus.hu",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "6",
+    "name": "Hotel Silvanus",
+    "opening_hours:wellness": "Mo-Fr 08:00-21:00;Sa-Su 07:00-21:00",
+    "phone": "+36 26 398 311",
+    "roof:colour": "black",
+    "roof:levels": "0",
+    "roof:shape": "gabled",
+    "sauna": "yes",
+    "smoking": "outside",
+    "stars": "4",
+    "swimming_pool": "no",
+    "tourism": "hotel",
+    "website": "https://www.hotelsilvanus.hu/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 226458144,
+  "center": {
+    "lat": 47.7915605,
+    "lon": 18.9736788
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:conscriptionnumber": "27/1, 27/2, 27/3",
+    "addr:housenumber": "23-29",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "castle_type": "palace",
+    "date": "14-15. szs",
+    "description": "Királyi palota feltárt romjai, gótikus-reneszánsz, 14-15. szs",
+    "historic": "castle",
+    "name": "Visegrádi Királyi Palota",
+    "name:pl": "Pałac królewski w Wyszehradzie",
+    "payment:debit_cards": "yes",
+    "ref": "Műemléki védelem, azonosító: 7594;törzsszám: 7504",
+    "ruins": "yes",
+    "tourism": "attraction",
+    "url:muemlekem": "https://muemlekem.hu/muemlek/show/7594"
+  }
+},
+{
+  "type": "way",
+  "id": 226458361,
+  "center": {
+    "lat": 47.7881161,
+    "lon": 18.9737991
+  },
+  "tags": {
+    "name": "Szikla",
+    "tourism": "attraction",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 282728513,
+  "center": {
+    "lat": 47.7756909,
+    "lon": 18.9659012
+  },
+  "tags": {
+    "archaeological_site": "fortification",
+    "fortification_type": "limes",
+    "height": "1",
+    "heritage": "2",
+    "historic": "archaeological_site",
+    "material": "stone",
+    "name": "Római őrtorony romja",
+    "ref": "Műemléki védelem azonosító: 7610; törzsszám: 8794",
+    "start_date": "372",
+    "tourism": "attraction",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 286437892,
+  "center": {
+    "lat": 47.7983064,
+    "lon": 18.9959498
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "architect": "Makovecz Imre",
+    "architect:wikidata": "Q338824",
+    "architect:wikipedia": "hu:Makovecz Imre",
+    "building": "yes",
+    "name": "Mogyoróhegy Étterem",
+    "toilets:wheelchair": "limited",
+    "tourism": "attraction",
+    "website": "https://mogyorohegy.hu",
+    "wheelchair": "yes",
+    "wikidata": "Q123385071"
+  }
+},
+{
+  "type": "way",
+  "id": 292658595,
+  "center": {
+    "lat": 47.7881289,
+    "lon": 18.9737602
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "denomination": "roman_catholic",
+    "mapillary": "137478408399275",
+    "name": "Kálvária-kápolna",
+    "religion": "christian",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 293039743,
+  "center": {
+    "lat": 47.8080628,
+    "lon": 19.0103011
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "reformed",
+    "name": "Református templom",
+    "religion": "christian",
+    "start_date": "1794..1803"
+  }
+},
+{
+  "type": "way",
+  "id": 293042670,
+  "center": {
+    "lat": 47.8081078,
+    "lon": 19.0044142
+  },
+  "tags": {
+    "addr:city": "Kisoroszi",
+    "addr:postcode": "2024",
+    "addr:street": "Széchenyi út",
+    "alt_name": "kisoroszi templom",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "roman_catholic",
+    "name": "Szentolvasó királynéja templom",
+    "religion": "christian",
+    "start_date": "1719",
+    "url:miserend": "http://miserend.hu/?templom=2131"
+  }
+},
+{
+  "type": "way",
+  "id": 293044892,
+  "center": {
+    "lat": 47.8096518,
+    "lon": 19.0012889
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "denomination": "roman_catholic",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 343451245,
+  "center": {
+    "lat": 47.7866725,
+    "lon": 18.9728334
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Kálvária",
+    "surface": "rock"
+  }
+},
+{
+  "type": "way",
+  "id": 367340445,
+  "center": {
+    "lat": 47.8014767,
+    "lon": 18.9648482
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "2120/2",
+    "addr:postcode": "2626",
+    "addr:street": "Váci út",
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "date": "1770",
+    "denomination": "roman_catholic",
+    "description": "Szt. Rókus-kápolna, barokk, 1770 körül. Egyhajós, fa huszártoronnyal, egyszerű, késő barokk épület, egyenes záródású szentéllyel",
+    "fixme": "resurvey house number",
+    "heritage": "2",
+    "historic": "chapel",
+    "name": "Szent Rókus-kápolna",
+    "ref": "Műemléki azonosító: 7183;törzsszám: 7151",
+    "religion": "christian",
+    "source": "survey",
+    "url": "http://www.muemlekem.hu/muemlek?id=7183",
+    "url:miserend": "https://miserend.hu/templom/4442",
+    "website": "https://miserend.hu/?templom=4442"
+  }
+},
+{
+  "type": "way",
+  "id": 368678275,
+  "center": {
+    "lat": 47.7892783,
+    "lon": 18.9575612
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "1",
+    "addr:housenumber": "1",
+    "addr:postcode": "2626",
+    "addr:street": "Szent Imre herceg tér",
+    "admin_level": "8",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "date": "1509",
+    "denomination": "roman_catholic",
+    "description": "R.k. templom, gótikus, 1509. Átalakítva barokk stílusban 1771-ben. Berendezése barokk, 18. sz. A belsőben a toronyaljban gótikus csillagboltozat gótikus zárókövén 1509.",
+    "heritage": "2",
+    "historic": "church",
+    "name": "Szent Kereszt felmagasztalása templom",
+    "operator": "Római Katolikus Plébánia, Nagymaros",
+    "ref": "Műemléki védelem, azonosító: 7182;törzsszám: 7150",
+    "religion": "christian",
+    "start_date": "1509",
+    "tourism": "attraction",
+    "url:miserend": "http://miserend.hu/?templom=744",
+    "url:muemlekem": "https://muemlekem.hu/muemlek/show/7182",
+    "website": "https://nagymarosiplebania.hu/",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 368680649,
+  "center": {
+    "lat": 47.7902209,
+    "lon": 18.9587529
+  },
+  "tags": {
+    "abandoned:amenity": "restaurant",
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "1940",
+    "addr:housenumber": "24",
+    "addr:postcode": "2626",
+    "addr:street": "Magyar utca",
+    "building": "yes",
+    "building:levels": "1",
+    "heritage": "6",
+    "historic": "yes",
+    "old_name": "Mátyás Király vendéglő",
+    "ref": "Helyi védelem, rendelet: 11/2002; azonosító: 13920",
+    "url": "http://www.muemlekem.hu/muemlek?id=-13920"
+  }
+},
+{
+  "type": "way",
+  "id": 368700431,
+  "center": {
+    "lat": 47.7979815,
+    "lon": 18.9566940
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:housenumber": "20",
+    "addr:postcode": "2626",
+    "addr:street": "Kittenberger Kálmán utca",
+    "building": "public",
+    "building:levels": "1",
+    "ele": "136",
+    "height": "5.5",
+    "name": "Kittenberger Kálmán emlékház",
+    "subject:wikidata": "Q1112757",
+    "subject:wikipedia": "hu:Kittenberger Kálmán",
+    "tourism": "museum",
+    "url": "https://geocaching.hu/poi.geo?id=151796",
+    "url:utisugo": "https://m.utisugo.hu/latnivalok/kittenberger-kalman-egykori-lakohaza-292900.html"
+  }
+},
+{
+  "type": "way",
+  "id": 368703192,
+  "center": {
+    "lat": 47.7961637,
+    "lon": 18.9639322
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "1898",
+    "addr:housenumber": "87",
+    "addr:postcode": "2626",
+    "addr:street": "Váci út",
+    "building": "stilt_house",
+    "building:levels": "1",
+    "description": "Építészeti-statikai bravúr az egy vasbeton penge-pilléren álló nyaralóépület az 1970-es évekből.",
+    "name": "Egylábú ház",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 368706669,
+  "center": {
+    "lat": 47.7901516,
+    "lon": 18.9543649
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "10523",
+    "addr:postcode": "2626",
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "date": "1773",
+    "denomination": "roman_catholic",
+    "description": "Kálvária-kápolna és stációk, barokk, 1773. Egyhajós, oromzatos homlokzat mögött fa huszártoronnyal, azon törtvonalú, bádogfestésű sisak.",
+    "ele": "165",
+    "heritage": "2",
+    "historic": "chapel",
+    "name": "Kálvária kápolna",
+    "operator": "Római Katolikus Plébánia, Nagymaros",
+    "ref": "Műemléki védelem, azonosító:7184 törzsszám:7146",
+    "religion": "christian",
+    "tourism": "attraction",
+    "url": "http://muemlekem.hu/muemlek?id=7184",
+    "url:miserend": "https://miserend.hu/templom/4443",
+    "website": "https://miserend.hu/?templom=4443"
+  }
+},
+{
+  "type": "way",
+  "id": 368706671,
+  "center": {
+    "lat": 47.7906391,
+    "lon": 18.9546497
+  },
+  "tags": {
+    "access": "private",
+    "addr:conscriptionnumber": "10530",
+    "barrier": "fence",
+    "contact:email": "dmrvzrt@dmrvzrt.hu",
+    "contact:phone": "+36 27 511 500",
+    "landuse": "industrial",
+    "man_made": "water_works",
+    "name": "Kálvária-dombi víztároló",
+    "operator": "DMRV Zrt; Duna Menti Regionális Vízmű Zártkörűen Működő Részvénytársaság; 2600 Vác, Kodály Zoltán út 3.",
+    "website": "https://www.dmrvzrt.hu"
+  }
+},
+{
+  "type": "way",
+  "id": 368848735,
+  "center": {
+    "lat": 47.7895717,
+    "lon": 18.9604786
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:postcode": "2626",
+    "addr:street": "Váci út",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "reformed",
+    "name": "Református templom",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 369274952,
+  "center": {
+    "lat": 47.7862580,
+    "lon": 18.9588447
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:housenumber": "2",
+    "addr:postcode": "2626",
+    "addr:street": "Nyár utca",
+    "building": "yes",
+    "description": "tájház",
+    "museum": "history",
+    "name": "Örökségek háza",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 371151288,
+  "center": {
+    "lat": 47.7914421,
+    "lon": 18.9618926
+  },
+  "tags": {
+    "building": "yes",
+    "description": "A nagymarosi Duna-parton álló, ún. Svájci-villaként ismert típusba sorolható lakóház (nyaraló). Igényesen kiképzett fa szerkezeti iparos munkái: tornác, ablak-és ajtótokok, zsalugáterek, mellvédek és oromzatok lombfűrészdíszesek.",
+    "heritage": "2",
+    "historic": "yes",
+    "name": "Vera-lak",
+    "ref": "Műemléki védelem, azonosító. 11421;törzsszám: 11066",
+    "url": "http://muemlekem.hu/muemlek?id=11421"
+  }
+},
+{
+  "type": "way",
+  "id": 373249862,
+  "center": {
+    "lat": 47.7896295,
+    "lon": 18.9575491
+  },
+  "tags": {
+    "addr:city": "Nagymaros",
+    "addr:conscriptionnumber": "607",
+    "addr:housenumber": "1",
+    "addr:postcode": "2626",
+    "addr:street": "Rákóczi Ferenc utca",
+    "building": "residential",
+    "description": "Lakóház, klasszicista, 19. sz. első fele. Átalakítva. Épült az 1820-as években.",
+    "historic": "building",
+    "name": "Műemlék lakóház",
+    "ref": "Műemléki védelem, azonosító: 7181 törzsszám: 7149",
+    "start_date": "1820",
+    "website": "https://muemlekem.hu/muemlek/show/7181"
+  }
+},
+{
+  "type": "way",
+  "id": 374931893,
+  "center": {
+    "lat": 47.7932737,
+    "lon": 18.9804820
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931896,
+  "center": {
+    "lat": 47.7937354,
+    "lon": 18.9804769
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931907,
+  "center": {
+    "lat": 47.7942427,
+    "lon": 18.9798269
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931918,
+  "center": {
+    "lat": 47.7937478,
+    "lon": 18.9814962
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931920,
+  "center": {
+    "lat": 47.7961401,
+    "lon": 18.9874166
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:street": "Nagyvillám",
+    "aerialway": "zip_line",
+    "name": "Canopy Visegrád",
+    "sport": "climbing_adventure",
+    "tourism": "attraction",
+    "website": "https://www.canopy.hu/"
+  }
+},
+{
+  "type": "way",
+  "id": 374931923,
+  "center": {
+    "lat": 47.7937778,
+    "lon": 18.9814690
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931924,
+  "center": {
+    "lat": 47.7937756,
+    "lon": 18.9805353
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931928,
+  "center": {
+    "lat": 47.7935412,
+    "lon": 18.9805755
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931934,
+  "center": {
+    "lat": 47.7937570,
+    "lon": 18.9806358
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931938,
+  "center": {
+    "lat": 47.7936088,
+    "lon": 18.9818195
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931939,
+  "center": {
+    "lat": 47.7937211,
+    "lon": 18.9807308
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 374931940,
+  "center": {
+    "lat": 47.7933271,
+    "lon": 18.9804688
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 380292439,
+  "center": {
+    "lat": 47.7966441,
+    "lon": 18.9787797
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "service",
+    "motor_vehicle": "private",
+    "name": "Salamontorony utca",
+    "smoothness": "intermediate",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 387174350,
+  "center": {
+    "lat": 47.7887151,
+    "lon": 18.9541016
+  },
+  "tags": {
+    "building": "residential",
+    "building:levels": "1",
+    "description": "https://nagymaros.hu/wp-content/uploads/2021/10/8-2019-telep%C3%BCl%C3%A9sk%C3%A9p-1-mell%C3%A9klet.pdf",
+    "heritage:operator": "municipaly",
+    "historic": "heritage"
+  }
+},
+{
+  "type": "way",
+  "id": 387174363,
+  "center": {
+    "lat": 47.7890388,
+    "lon": 18.9545760
+  },
+  "tags": {
+    "building": "detached",
+    "building:levels": "1",
+    "description": "https://nagymaros.hu/wp-content/uploads/2021/10/8-2019-telep%C3%BCl%C3%A9sk%C3%A9p-1-mell%C3%A9klet.pdf",
+    "heritage:operator": "municipaly",
+    "historic": "heritage",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 387174365,
+  "center": {
+    "lat": 47.7890498,
+    "lon": 18.9504569
+  },
+  "tags": {
+    "building": "detached",
+    "building:colour": "white",
+    "building:levels": "1",
+    "description": "https://nagymaros.hu/wp-content/uploads/2021/10/8-2019-telep%C3%BCl%C3%A9sk%C3%A9p-1-mell%C3%A9klet.pdf",
+    "heritage:operator": "municipaly",
+    "historic": "heritage",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 387214460,
+  "center": {
+    "lat": 47.7910836,
+    "lon": 18.9742902
+  },
+  "tags": {
+    "alt_name": "Királyi kápolna",
+    "amenity": "place_of_worship",
+    "barrier": "wall",
+    "building": "chapel",
+    "denomination": "roman_catholic",
+    "heritage": "2",
+    "name": "Palotakápolna",
+    "religion": "christian",
+    "ruins": "yes",
+    "website": "https://visegradmuzeum.hu/palota2/palotakapolna/"
+  }
+},
+{
+  "type": "way",
+  "id": 438783821,
+  "center": {
+    "lat": 47.8236997,
+    "lon": 18.9479539
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 489402973,
+  "center": {
+    "lat": 47.7854710,
+    "lon": 18.9668191
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "maxspeed": "5",
+    "name": "Rév utca",
+    "ref": "11321",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left;right"
+  }
+},
+{
+  "type": "way",
+  "id": 490654255,
+  "center": {
+    "lat": 47.7870168,
+    "lon": 18.9702310
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:housenumber": "34",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "building": "house",
+    "name": "Mátyás Király Művelődési Ház és Városi Könyvtár Duna Mozi"
+  }
+},
+{
+  "type": "way",
+  "id": 490761484,
+  "center": {
+    "lat": 47.7859306,
+    "lon": 18.9670347
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Atlantis Visegrád Club Kft. révkikötő",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 502970076,
+  "center": {
+    "lat": 47.7776358,
+    "lon": 18.9847713
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "cycleway:both": "shared_lane",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Mátyás király utca",
+    "ref": "11116",
+    "smoothness": "good",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 514314572,
+  "center": {
+    "lat": 47.7890888,
+    "lon": 18.9556377
+  },
+  "tags": {
+    "building": "chapel",
+    "name": "Kiskápolna"
+  }
+},
+{
+  "type": "way",
+  "id": 523423698,
+  "center": {
+    "lat": 47.7890565,
+    "lon": 18.9559073
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Kálvária utca",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 536931876,
+  "center": {
+    "lat": 47.7896317,
+    "lon": 18.9488283
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Kálvária domb",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 551193758,
+  "center": {
+    "lat": 47.7888260,
+    "lon": 18.9598207
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "memorial",
+    "memorial": "war_memorial",
+    "surface": "stone"
+  }
+},
+{
+  "type": "way",
+  "id": 551333416,
+  "center": {
+    "lat": 47.7934317,
+    "lon": 18.9806400
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "height": "12",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 551352065,
+  "center": {
+    "lat": 47.7978981,
+    "lon": 18.9806610
+  },
+  "tags": {
+    "barrier": "wall",
+    "height": "1",
+    "historic": "ruins",
+    "wall": "stone"
+  }
+},
+{
+  "type": "way",
+  "id": 551362126,
+  "center": {
+    "lat": 47.7941355,
+    "lon": 18.9799966
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 551363070,
+  "center": {
+    "lat": 47.7938052,
+    "lon": 18.9799003
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 593472524,
+  "center": {
+    "lat": 47.7964867,
+    "lon": 18.9774910
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "service",
+    "motor_vehicle": "private",
+    "name": "Salamontorony utca",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt",
+    "tunnel": "building_passage"
+  }
+},
+{
+  "type": "way",
+  "id": 593472529,
+  "center": {
+    "lat": 47.7965511,
+    "lon": 18.9778812
+  },
+  "tags": {
+    "class:bicycle:touring": "1",
+    "highway": "service",
+    "motor_vehicle": "private",
+    "name": "Salamontorony utca",
+    "smoothness": "bad",
+    "source:class:bicycle:touring": "AMFK",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 599042981,
+  "center": {
+    "lat": 47.7880575,
+    "lon": 18.9643538
+  },
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "duration": "20",
+    "fee": "yes",
+    "ferry": "primary",
+    "ferry:cable": "no",
+    "foot": "yes",
+    "hgv": "yes",
+    "maxweight": "40 t",
+    "motor_vehicle": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Nagymaros - Visegrád komp",
+    "passenger": "yes",
+    "reservation": "no",
+    "route": "ferry",
+    "toll": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 599042982,
+  "center": {
+    "lat": 47.7867849,
+    "lon": 18.9672354
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "2",
+    "name": "Rév utca",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 599043943,
+  "center": {
+    "lat": 47.7864840,
+    "lon": 18.9670970
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lit": "yes",
+    "name": "Rév utca",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 633986674,
+  "center": {
+    "lat": 47.7795753,
+    "lon": 18.9676335
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:conscriptionnumber": "165",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "addr:suburb": "Újtelep",
+    "amenity": "place_of_worship",
+    "architect": "Kocsis Ágnes;Vörösné Baracsi Erzsébet",
+    "architect:wikidata": "Q136686873",
+    "building": "church",
+    "denomination": "reformed",
+    "description": "Istentisztelet Visegrádon: minden vasárnap délelőtt 9 órakor.",
+    "mapillary": "174016644518100",
+    "name": "Református templom",
+    "opening_hours": "Su 09:00-10:00",
+    "religion": "christian",
+    "start_date": "2009",
+    "tourism": "attraction",
+    "url": "https://reformacio.mnl.gov.hu/orokseg/visegradi_reformatus_templom",
+    "url:visegrad": "https://www.visegrad.hu/reformatus-templom",
+    "website": "http://www.dunabogdany.hu/dunabogdanyi-reformatus-egyhazkoezseg",
+    "wheelchair": "yes",
+    "wikimedia_commons": "Category:Reformed Church in Visegrád"
+  }
+},
+{
+  "type": "way",
+  "id": 683873848,
+  "center": {
+    "lat": 47.7979788,
+    "lon": 18.9808684
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "height": "1",
+    "historic": "ruins",
+    "wall": "stone"
+  }
+},
+{
+  "type": "way",
+  "id": 694648893,
+  "center": {
+    "lat": 47.8093605,
+    "lon": 19.0011556
+  },
+  "tags": {
+    "historic": "wayside_shrine",
+    "landuse": "religious"
+  }
+},
+{
+  "type": "way",
+  "id": 732445569,
+  "center": {
+    "lat": 47.7859024,
+    "lon": 18.9668416
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "5",
+    "name": "Rév utca",
+    "ref": "11321",
+    "source:maxspeed": "sign"
+  }
+},
+{
+  "type": "way",
+  "id": 813625378,
+  "center": {
+    "lat": 47.7845772,
+    "lon": 18.9777166
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:postcode": "2025",
+    "addr:street": "Temető sor",
+    "building": "chapel"
+  }
+},
+{
+  "type": "way",
+  "id": 837997083,
+  "center": {
+    "lat": 47.8242219,
+    "lon": 18.9433936
+  },
+  "tags": {
+    "archaeological_site": "settlement",
+    "description": "10866 régészeti lelőhely; őskori szórványlelet",
+    "historic": "archaeological_site",
+    "name": "Török-mező",
+    "ref": "10866"
+  }
+},
+{
+  "type": "way",
+  "id": 877983098,
+  "center": {
+    "lat": 47.7830127,
+    "lon": 18.9701804
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "denomination": "roman_catholic",
+    "mapillary": "433226731445810",
+    "name": "Millenniumi (Fábián-Sebestyén) kápolna",
+    "religion": "christian",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 989181310,
+  "center": {
+    "lat": 47.7896636,
+    "lon": 18.9550465
+  },
+  "tags": {
+    "landuse": "religious",
+    "name": "Nagymarosi Kálvária"
+  }
+},
+{
+  "type": "way",
+  "id": 1028641436,
+  "center": {
+    "lat": 47.8044180,
+    "lon": 18.9981071
+  },
+  "tags": {
+    "barrier": "wall",
+    "castle_type": "fortress",
+    "height": "1",
+    "historic": "castle",
+    "historic:civilization": "ancient_roman",
+    "material": "stone",
+    "name": "Római őrtorony romja",
+    "opening_hours": "24/7",
+    "reservation": "no",
+    "ruins": "yes",
+    "source": "survey",
+    "source:geometry": "Maxar Standard Imagery (Beta)",
+    "survey:date": "2018-04-18",
+    "tourism": "attraction",
+    "wall": "castle_wall",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1149450509,
+  "center": {
+    "lat": 47.7846842,
+    "lon": 18.9750983
+  },
+  "tags": {
+    "highway": "service",
+    "name": "Mátyás köz"
+  }
+},
+{
+  "type": "way",
+  "id": 1149451920,
+  "center": {
+    "lat": 47.7844188,
+    "lon": 18.9752359
+  },
+  "tags": {
+    "highway": "service",
+    "name": "Mátyás köz"
+  }
+},
+{
+  "type": "way",
+  "id": 1202587246,
+  "center": {
+    "lat": 47.8059279,
+    "lon": 19.0100307
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Rév utca"
+  }
+},
+{
+  "type": "way",
+  "id": 1274219329,
+  "center": {
+    "lat": 47.7877553,
+    "lon": 18.9736114
+  },
+  "tags": {
+    "highway": "steps",
+    "name": "Kálvária",
+    "surface": "rock"
+  }
+},
+{
+  "type": "way",
+  "id": 1274219330,
+  "center": {
+    "lat": 47.7874791,
+    "lon": 18.9734303
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Kálvária",
+    "surface": "rock"
+  }
+},
+{
+  "type": "way",
+  "id": 1274219331,
+  "center": {
+    "lat": 47.7872264,
+    "lon": 18.9732455
+  },
+  "tags": {
+    "handrail": "no",
+    "highway": "steps",
+    "incline": "up",
+    "name": "Kálvária",
+    "surface": "rock"
+  }
+},
+{
+  "type": "way",
+  "id": 1274219332,
+  "center": {
+    "lat": 47.7879128,
+    "lon": 18.9736946
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Kálvária",
+    "surface": "rock"
+  }
+},
+{
+  "type": "way",
+  "id": 1275058172,
+  "center": {
+    "lat": 47.7862629,
+    "lon": 18.9670004
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "2",
+    "lit": "yes",
+    "name": "Rév utca"
+  }
+},
+{
+  "type": "way",
+  "id": 1356423044,
+  "center": {
+    "lat": 47.7943859,
+    "lon": 18.9974071
+  },
+  "tags": {
+    "building": "chapel"
+  }
+},
+{
+  "type": "way",
+  "id": 1539511170,
+  "center": {
+    "lat": 47.7901748,
+    "lon": 18.9731540
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ferences templom romjai"
+  }
+},
+{
+  "type": "relation",
+  "id": 2117154,
+  "center": {
+    "lat": 47.7481157,
+    "lon": 18.9602845
+  },
+  "tags": {
+    "jel": "k",
+    "name": "K, OKT 16. (Dobogókő – Pilisszentlászló – Visegrád – Nagymaros, visegrádi rév)",
+    "name:de": "Internationaler Bergwanderweg Eisenach–Budapest / OKT 16. (Dobogókő – Pilisszentlászló – Visegrád – Nagymaros, visegrádi rév)",
+    "network": "nwn",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "OKT",
+    "route": "hiking",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2880511,
+  "center": {
+    "lat": 47.7685884,
+    "lon": 18.9965986
+  },
+  "tags": {
+    "jel": "k+",
+    "name": "K+ (Pálócki-rét környéke – József-forrás – Visegrád, nagymarosi rév)",
+    "network": "lwn",
+    "osmc:symbol": "blue:white:blue_cross",
+    "ref": "K+",
+    "route": "hiking",
+    "symbol": "blue cross",
+    "symbol:hu": "kék kereszt",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 3168650,
+  "center": {
+    "lat": 47.7953024,
+    "lon": 18.9826527
+  },
+  "tags": {
+    "jel": "kl",
+    "name": "K▙ (Visegrád, Fellegvár (autóparkoló) – Visegrádi-erdő)",
+    "network": "lwn",
+    "osmc:symbol": "blue:white:blue_L",
+    "ref": "KL",
+    "route": "hiking",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 4735495,
+  "center": {
+    "lat": 47.7938997,
+    "lon": 18.9929170
+  },
+  "tags": {
+    "attraction": "summer_toboggan",
+    "name": "Visegrádi Bobpálya",
+    "name:en": "Visegrád Toboggan Park",
+    "operator": "Visegrádi Bobpálya Bt.",
+    "ref:HU:vatin": "20903273-2-13",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "wikimedia_commons": "Category:Summer toboggan in Visegrad"
+  }
+},
+{
+  "type": "relation",
+  "id": 7177760,
+  "center": {
+    "lat": 47.7859042,
+    "lon": 18.9706476
+  },
+  "tags": {
+    "addr:city": "Visegrád",
+    "addr:postcode": "2025",
+    "addr:street": "Fő utca",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "roman_catholic",
+    "name": "Keresztelő Szent János-templom",
+    "religion": "christian",
+    "type": "multipolygon",
+    "url:miserend": "http://miserend.hu/?templom=2297",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "relation",
+  "id": 8344745,
+  "center": {
+    "lat": 47.7879138,
+    "lon": 18.8530631
+  },
+  "tags": {
+    "from": "Esztergom, vasútállomás",
+    "name": "880 \"D\" v: Esztergom, vasútállomás => Visegrád, nagymarosi rév",
+    "public_transport:version": "2",
+    "ref": "880",
+    "ref:volan": "2920",
+    "route": "bus",
+    "to": "Visegrád, nagymarosi rév",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8344748,
+  "center": {
+    "lat": 47.7879138,
+    "lon": 18.8530711
+  },
+  "tags": {
+    "from": "Visegrád, nagymarosi rév",
+    "name": "880 \"D\": Visegrád, nagymarosi rév => Esztergom, vasútállomás",
+    "public_transport:version": "2",
+    "ref": "880",
+    "ref:volan": "2920",
+    "route": "bus",
+    "to": "Esztergom, vasútállomás",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8344755,
+  "center": {
+    "lat": 47.7738945,
+    "lon": 18.9220753
+  },
+  "tags": {
+    "from": "Visegrád, nagymarosi rév",
+    "name": "880 \"H\": Visegrád, nagymarosi rév => Pilismarót, községháza",
+    "public_transport:version": "2",
+    "ref": "880",
+    "ref:volan": "2920",
+    "route": "bus",
+    "to": "Pilismarót, községháza",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8349710,
+  "center": {
+    "lat": 47.7963541,
+    "lon": 18.9771430
+  },
+  "tags": {
+    "castle_type": "defensive",
+    "historic": "ruins",
+    "name": "Visegrádi alsóvár",
+    "ruins": "castle",
+    "tourism": "attraction",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 8997863,
+  "center": {
+    "lat": 47.7888215,
+    "lon": 18.9819837
+  },
+  "tags": {
+    "from": "Visegrád, Kis-Villám autóbusz-forduló",
+    "name": "883 \"C\" v: Visegrád, Kis-Villám autóbusz-forduló => Visegrád, nagymarosi rév",
+    "public_transport:version": "2",
+    "ref": "883",
+    "ref:volan": "2920",
+    "route": "bus",
+    "to": "Visegrád, nagymarosi rév",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8997865,
+  "center": {
+    "lat": 47.7888215,
+    "lon": 18.9819837
+  },
+  "tags": {
+    "from": "Visegrád, nagymarosi rév",
+    "name": "883 \"C\": Visegrád, nagymarosi rév => Visegrád, Kis-Villám autóbusz-forduló",
+    "public_transport:version": "2",
+    "ref": "883",
+    "ref:volan": "2920",
+    "route": "bus",
+    "to": "Visegrád, Kis-Villám autóbusz-forduló",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 14555893,
+  "center": {
+    "lat": 47.7985310,
+    "lon": 18.9846087
+  },
+  "tags": {
+    "jel": "kq",
+    "name": "K● (Mátyás-forrás)",
+    "network": "lwn",
+    "osmc:symbol": "blue:white:blue_dot",
+    "ref": "K●",
+    "route": "hiking",
+    "type": "route"
+  }
+}
+
+  ]
+}
