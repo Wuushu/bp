@@ -115,7 +115,8 @@
       (multi ? '<p class="qturn">' + esc(st.players[who]) + '’s turn</p>' : '') +
       '<h3 class="qq">' + esc(q.q) + '</h3>' +
       '<button type="button" class="qlisten" data-listen="1">' + SPK + ' Listen</button>' +
-      '<div class="qopts">' + opts + '</div>' + fb;
+      '<div class="qopts">' + opts + '</div>' + fb +
+      '<button type="button" class="qreset" data-reset="1">↺ Reset quiz</button>';
     if (fresh && speak && st.picked === null) listen();
   }
 
@@ -188,6 +189,16 @@
     }
     else if (t.dataset.again) { st = { players: st.players, scores: st.players.map(function () { return 0; }), i: 0, picked: null, done: false }; save(KEY, st); render(true); }
     else if (t.dataset.change) { st = null; save(KEY, null); chosen = {}; render(false); }
+    else if (t.dataset.reset) {
+      if (t.dataset.armed) {                                   // second tap: back to the start, same players picked
+        if (audio) audio.pause();
+        st = null; save(KEY, null); render(false);
+        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {                                                 // first tap: ask for a second one
+        t.dataset.armed = '1'; t.classList.add('armed'); t.textContent = 'Tap again to reset the scores';
+        setTimeout(function () { if (t.isConnected) { delete t.dataset.armed; t.classList.remove('armed'); t.textContent = '↺ Reset quiz'; } }, 3000);
+      }
+    }
   });
   root.addEventListener('change', function (e) { if (e.target.id === 'qspk') { speak = e.target.checked; save(SKEY, speak); } });
 

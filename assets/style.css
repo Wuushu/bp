@@ -164,6 +164,8 @@ ol.stops{list-style:none;margin:0 0 6px;padding:0}
 .qfb b{display:block;margin-bottom:2px}
 .qnext{width:100%;opacity:0;transform:translateY(6px);transition:opacity .3s ease .35s,transform .3s ease .35s}
 .qnext.show{opacity:1;transform:none}
+.qreset{display:block;margin:16px auto 0;background:none;border:0;padding:6px 10px;color:var(--muted);font:400 14px var(--sans);text-decoration:underline;cursor:pointer}
+.qreset.armed{color:var(--accent);font-weight:600;text-decoration:none}
 .qconf{position:fixed;z-index:3000;width:8px;height:12px;border-radius:2px;pointer-events:none}
 .qend{text-align:center;padding:6px 0 14px}
 .qbig{font:400 64px/1 var(--serif);margin:6px 0 4px}.qbig small{font-size:24px;color:var(--muted)}
