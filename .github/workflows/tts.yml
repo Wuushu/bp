@@ -11,21 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with: { python-version: '3.12' }
       - name: synth
         continue-on-error: true
         run: |
           set -x
           exec > >(tee tts/log.txt) 2>&1
-          python -m pip install -q piper-tts==1.2.0
-          mkdir -p voices
-          base=https://huggingface.co/rhasspy/piper-voices/resolve/main/sv/sv_SE/nst/medium
-          curl -sSfL -o voices/sv.onnx "$base/sv_SE-nst-medium.onnx"
-          curl -sSfL -o voices/sv.onnx.json "$base/sv_SE-nst-medium.onnx.json"
-          for f in tts/*.txt; do
-            n=$(basename "$f" .txt)
-            [ "$n" = log ] && continue
-            python -m piper --model voices/sv.onnx --output_file "tts/$n.wav" --sentence_silence 0.35 --length_scale 1.05 < "$f"
+          python -m pip install -q edge-tts
+          edge-tts --list-voices | grep -i sv-SE || true
+          for v in sv-SE-MattiasNeural sv-SE-SofieNeural; do
+            edge-tts --voice "$v" --rate=+3% --file tts/budaborgen.txt --write-media "tts/edge-$v.mp3"
           done
           ls -la tts
       - name: commit
@@ -34,5 +29,5 @@ jobs:
           git config user.name "tts-test"
           git config user.email "tts-test@users.noreply.github.com"
           git add -f tts/
-          git commit -m "TTS test audio" || echo "nothing to commit"
+          git commit -m "TTS test audio (edge voices)" || echo "nothing to commit"
           git push
