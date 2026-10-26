@@ -1,0 +1,18 @@
+name: osm-fetch
+on:
+  push:
+    branches: [photo-fetch]
+    paths: ['osm/fetch.py', '.github/workflows/osm.yml']
+permissions:
+  contents: write
+jobs:
+  osm:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 osm/fetch.py 2>&1 | tee osm/log.txt
+        continue-on-error: true
+      - if: always()
+        run: |
+          git config user.name "osm-fetch"; git config user.email "osm-fetch@users.noreply.github.com"
+          git add -f osm/; git commit -m "OSM data for Visegrád" || true; git push
