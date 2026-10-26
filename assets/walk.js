@@ -1,30 +1,26 @@
-/* Geofenced audio walk for a guide page.
-   - Tap "Start audio walk" once (unlocks audio, asks for location, keeps the screen awake).
-   - When you're within RADIUS of the next unplayed stop, it plays (lowest number first).
-   - Sketchy GPS: very vague fixes never auto-play; the floating button always offers the
-     next stop with its distance, and every stop has its own play button.
-   Location stays on the phone. */
+/* Audio guide spots for a guide page – no autoplay.
+   - On load the page asks for location and watches it while open.
+   - The top-right button is inactive until you're within RADIUS of a numbered spot; then it
+     lights up with that spot's number and title ("Listen to the audio guide for this spot").
+     Nothing plays until you tap it (or a map pin / a row in the list).
+   - Vague GPS fixes never light it up. Location stays on the phone. */
 (function () {
   var W = window.WALK;
   if (!W) return;
   var R = W.radius || 100;
-  var VAGUE = 250;                       // metres of GPS uncertainty above which we don't auto-play
+  var VAGUE = 250;                       // metres of uncertainty above which we don't trust a fix
   var stops = W.stops;
   var $ = function (s) { return document.querySelector(s); };
-  var audio = $('#waudio'), fl = $('#wfloat'), stEl = $('#wstatus'), startBtn = $('#wstart');
-  var KEY = 'walk-played-' + W.id;
-  var played = new Set();
-  try { played = new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch (e) {}
-  var started = false, current = null, userPaused = false, pos = null, acc = null, lastFix = 0,
-      gpsMsg = '', wake = null, watchId = null, map = null, me = null, meAcc = null, pins = {};
+  var audio = $('#waudio'), fl = $('#wfloat');
+  var current = null, pos = null, acc = null, gps = 'idle', watchId = null, map = null, me = null, meAcc = null, pins = {};
+  var heard = new Set();
 
   var ICON = {
-    play: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>',
-    pause: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z" fill="currentColor"/></svg>',
-    done: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+    play: '<svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>',
+    pause: '<svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z" fill="currentColor"/></svg>',
+    phones: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="5" height="8" rx="2" fill="currentColor"/><rect x="16" y="13" width="5" height="8" rx="2" fill="currentColor"/></svg>'
   };
 
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(Array.from(played))); } catch (e) {} }
   function byN(n) { for (var i = 0; i < stops.length; i++) if (stops[i].n === n) return stops[i]; return null; }
   function dist(a, b, c, d) {
     var k = Math.PI / 180, x = (d - b) * k * Math.cos((a + c) / 2 * k), y = (c - a) * k;
@@ -32,102 +28,63 @@
   }
   function fmtD(m) { return m < 1000 ? (Math.round(m / 10) * 10) + ' m' : (m / 1000).toFixed(1) + ' km'; }
   function fmtT(s) { s = Math.max(0, Math.round(s || 0)); return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
-  function isPlaying() { return current !== null && !audio.paused && !audio.ended; }
-  function nextStop() { for (var i = 0; i < stops.length; i++) if (!played.has(stops[i].n)) return stops[i]; return null; }
   function dTo(s) { return pos ? dist(pos[0], pos[1], s.lat, s.lon) : null; }
-  function inRange() {                   // lowest-numbered unplayed stop within the radius
+  function nearest() {
+    if (!pos) return null;
+    var best = null, bd = 1e12;
+    stops.forEach(function (s) { var d = dTo(s); if (d < bd) { bd = d; best = s; } });
+    return best && { s: best, d: bd };
+  }
+  function here() {                       // the spot you're at: nearest one within the radius
     if (!pos || acc > VAGUE) return null;
-    for (var i = 0; i < stops.length; i++) {
-      var s = stops[i];
-      if (!played.has(s.n) && dTo(s) <= R) return s;
-    }
-    return null;
+    var nb = nearest();
+    return nb && nb.d <= R ? nb.s : null;
   }
 
-  function play(n, auto) {
+  function play(n) {
     var s = byN(n);
     if (!s) return;
-    if (current === n && audio.src && !audio.ended) {          // toggle the one already loaded
-      if (audio.paused) { userPaused = false; audio.play().catch(function () {}); }
-      else { userPaused = true; audio.pause(); }
+    if (current === n && audio.src && !audio.ended) {          // same spot: pause / resume
+      if (audio.paused) audio.play().catch(function () {}); else audio.pause();
       render();
       return;
     }
     current = n;
-    userPaused = false;
     audio.src = W.base + s.file;
-    var p = audio.play();
-    played.add(n); save();
-    if (p && p.catch) p.catch(function () {                    // blocked autoplay → wait for a tap
-      if (auto) { played.delete(n); save(); current = null; }
-      render();
-    });
+    audio.play().catch(function () {});
+    heard.add(n);
     if ('mediaSession' in navigator && window.MediaMetadata) {
-      try { navigator.mediaSession.metadata = new MediaMetadata({ title: n + ' · ' + s.title, artist: W.label, album: 'Audio walk' }); } catch (e) {}
+      try { navigator.mediaSession.metadata = new MediaMetadata({ title: n + ' · ' + s.title, artist: W.label, album: 'Audio guide' }); } catch (e) {}
     }
     render();
   }
 
-  function check() {
-    if (!started || isPlaying() || userPaused) return;
-    var c = inRange();
-    if (c) play(c.n, true);
-  }
-
-  function onFix(p) {
-    pos = [p.coords.latitude, p.coords.longitude];
-    acc = p.coords.accuracy || 9999;
-    lastFix = Date.now();
-    gpsMsg = acc > VAGUE ? 'GPS is vague right now (±' + fmtD(acc) + ') – tap a stop to play it.' : '';
-    drawMe();
-    check();
-    render();
-  }
-  function onErr(e) {
-    gpsMsg = e && e.code === 1
-      ? 'Location is off for this page – just tap a stop to play it.'
-      : 'Looking for GPS… you can still tap any stop.';
+  /* ---------- location ---------- */
+  function startGps() {
+    if (watchId !== null || !('geolocation' in navigator)) { if (!('geolocation' in navigator)) { gps = 'none'; render(); } return; }
+    gps = 'finding';
+    watchId = navigator.geolocation.watchPosition(function (p) {
+      pos = [p.coords.latitude, p.coords.longitude];
+      acc = p.coords.accuracy || 9999;
+      gps = acc > VAGUE ? 'vague' : 'ok';
+      drawMe();
+      render();
+    }, function (e) {
+      gps = e && e.code === 1 ? 'denied' : (pos ? gps : 'finding');
+      if (e && e.code === 1) { watchId = null; }
+      render();
+    }, { enableHighAccuracy: true, maximumAge: 15000, timeout: 30000 });
     render();
   }
 
-  function keepAwake() {
-    try {
-      if ('wakeLock' in navigator && document.visibilityState === 'visible') {
-        navigator.wakeLock.request('screen').then(function (w) { wake = w; }).catch(function () {});
-      }
-    } catch (e) {}
-  }
-  document.addEventListener('visibilitychange', function () { if (started && document.visibilityState === 'visible') { keepAwake(); check(); } });
-
-  function start() {
-    if (started) { stopWalk(); return; }
-    started = true;
-    try { audio.src = W.base + 'silence.mp3'; var u = audio.play(); if (u && u.then) u.then(function () { if (current === null) audio.pause(); }).catch(function () {}); } catch (e) {}
-    keepAwake();
-    if ('geolocation' in navigator) {
-      gpsMsg = 'Looking for GPS…';
-      watchId = navigator.geolocation.watchPosition(onFix, onErr, { enableHighAccuracy: true, maximumAge: 5000, timeout: 30000 });
-    } else gpsMsg = 'This browser can’t share location – tap the stops to play them.';
-    stops.forEach(function (s) { try { fetch(W.base + s.file, { cache: 'force-cache' }).catch(function () {}); } catch (e) {} });
-    render();
-  }
-  function stopWalk() {
-    started = false;
-    if (watchId !== null) navigator.geolocation.clearWatch(watchId);
-    watchId = null;
-    if (wake) { try { wake.release(); } catch (e) {} wake = null; }
-    render();
-  }
-
-  audio.addEventListener('ended', function () {
-    current = null; userPaused = false; render();
-    setTimeout(check, 2500);                                     // e.g. stop 3 → 4 at the castle
-  });
+  audio.addEventListener('ended', function () { current = null; render(); });
   ['play', 'pause', 'timeupdate'].forEach(function (ev) { audio.addEventListener(ev, render); });
 
   /* ---------- map ---------- */
   function initMap() {
-    if (!window.L || !document.getElementById('wmap')) { var m = document.getElementById('wmap'); if (m) m.style.display = 'none'; return; }
+    var el = document.getElementById('wmap');
+    if (!el) return;
+    if (!window.L) { el.style.display = 'none'; return; }
     map = L.map('wmap', { scrollWheelZoom: false, zoomControl: true, attributionControl: true, zoomSnap: 0.25 });
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -142,10 +99,11 @@
     });
     stops.forEach(function (s) {
       L.circle([s.lat, s.lon], { radius: R, color: '#B2302B', weight: 1, opacity: .35, fillOpacity: .06, interactive: false }).addTo(map);
+      var nx = s.nudge ? s.nudge[0] : 0, ny = s.nudge ? s.nudge[1] : 0;
       var mk = L.marker([s.lat, s.lon], {
-        icon: L.divIcon({ className: '', html: '<span class="wpin">' + s.n + '</span>', iconSize: [30, 30], iconAnchor: [15 - (s.nudge ? s.nudge[0] : 0), 15 - (s.nudge ? s.nudge[1] : 0)] }),
+        icon: L.divIcon({ className: '', html: '<span class="wpin">' + s.n + '</span>', iconSize: [30, 30], iconAnchor: [15 - nx, 15 - ny] }),
         title: s.n + ' · ' + s.title, zIndexOffset: 1000
-      }).bindPopup('<b>' + s.n + ' · ' + s.title + '</b><br>' + s.where + '<br><button class="wpop" data-play="' + s.n + '">▶ Play</button>');
+      }).bindPopup('<b>' + s.n + ' · ' + s.title + '</b><br>' + s.where + ' · ' + fmtT(s.secs) + '<br><button class="wpop" type="button" data-play="' + s.n + '">▶ Listen</button>');
       mk.addTo(map);
       pins[s.n] = mk;
       pts.push([s.lat, s.lon]);
@@ -155,67 +113,74 @@
   function drawMe() {
     if (!map || !pos) return;
     if (!me) {
-      meAcc = L.circle(pos, { radius: acc, color: '#2F6FB0', weight: 1, fillOpacity: .12, interactive: false }).addTo(map);
+      meAcc = L.circle(pos, { radius: Math.min(acc, 2000), color: '#2F6FB0', weight: 1, fillOpacity: .12, interactive: false }).addTo(map);
       me = L.circleMarker(pos, { radius: 7, color: '#fff', weight: 2, fillColor: '#2F6FB0', fillOpacity: 1 }).addTo(map);
     } else { me.setLatLng(pos); meAcc.setLatLng(pos).setRadius(Math.min(acc, 2000)); }
   }
 
   /* ---------- UI ---------- */
+  function pill(icon, title, sub, extra) {
+    return icon + '<span class="wt"><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</span>' + (extra ? '<em>' + extra + '</em>' : '');
+  }
   function render() {
-    // list
+    var at = here();
+    // list rows + pins
     stops.forEach(function (s) {
       var li = document.querySelector('.stop[data-n="' + s.n + '"]');
-      if (!li) return;
       var playing = current === s.n && !audio.paused && !audio.ended;
-      li.classList.toggle('playing', playing);
-      li.classList.toggle('done', played.has(s.n) && !playing);
-      var ic = li.querySelector('.sicon');
-      if (ic) ic.innerHTML = playing ? ICON.pause : ICON.play;
-      var sm = li.querySelector('.sdist');
-      if (sm) { var d = dTo(s); sm.textContent = d !== null && started ? ' · ' + fmtD(d) + ' away' : ''; }
+      if (li) {
+        li.classList.toggle('playing', playing);
+        li.classList.toggle('here', at && at.n === s.n);
+        var ic = li.querySelector('.sicon');
+        if (ic) ic.innerHTML = playing ? ICON.pause : ICON.play;
+        var sm = li.querySelector('.sdist');
+        if (sm) { var d = dTo(s); sm.textContent = d !== null ? ' · ' + (d <= R && acc <= VAGUE ? 'you’re here' : fmtD(d) + ' away') : ''; }
+      }
       var pin = pins[s.n] && pins[s.n].getElement && pins[s.n].getElement();
-      if (pin && pin.firstChild) pin.firstChild.classList.toggle('done', played.has(s.n));
+      if (pin && pin.firstChild) pin.firstChild.classList.toggle('here', !!(at && at.n === s.n));
     });
-    // start button + status
-    if (startBtn) startBtn.innerHTML = started ? 'Audio walk is on · tap to stop' : 'Start audio walk';
-    startBtn && startBtn.classList.toggle('on', started);
-    var nx = nextStop(), msg = '';
-    if (started) {
-      if (gpsMsg) msg = gpsMsg;
-      else if (pos) msg = 'GPS ±' + fmtD(acc) + (nx ? ' · next: ' + nx.n + ' · ' + nx.title + ', ' + fmtD(dTo(nx)) : ' · all stops played');
-      if (pos && Date.now() - lastFix > 60000) msg = 'GPS hasn’t updated for a while – tap a stop to play it.';
-    } else msg = 'Location is only used on your phone. Keep this page open during the walk – it keeps the screen awake.';
-    if (stEl) stEl.textContent = msg;
-    // floating button
     if (!fl) return;
-    var cls = '', html = '', show = started || current !== null;
-    if (current !== null && !audio.ended) {
-      var s = byN(current), left = (audio.duration || s.secs) - (audio.currentTime || 0);
-      html = (audio.paused ? ICON.play : ICON.pause) + '<span>' + s.n + ' · ' + s.title + '</span><em>' + fmtT(left) + '</em>';
-      fl.dataset.n = s.n;
-    } else {
-      var c = started ? inRange() : null;
-      if (c) { cls = 'near'; html = ICON.play + '<span>' + c.n + ' · ' + c.title + '</span>'; fl.dataset.n = c.n; }
-      else if (nx) {
-        var d = dTo(nx);
-        cls = 'ghost'; html = ICON.play + '<span>Next ' + nx.n + ' · ' + nx.title + '</span>' + (d !== null ? '<em>' + fmtD(d) + '</em>' : '');
-        fl.dataset.n = nx.n;
-      } else { cls = 'ghost'; html = ICON.done + '<span>Walk complete</span>'; fl.dataset.n = ''; }
+    var cls = 'off', html, act = '';
+    var loaded = current !== null && !audio.ended;
+    var movedOn = loaded && audio.paused && at && at.n !== current;  // paused one, now at another spot
+    if (loaded && !movedOn) {                                    // play/pause control
+      var c = byN(current), left = (audio.duration || c.secs) - (audio.currentTime || 0);
+      cls = 'on';
+      html = pill(audio.paused ? ICON.play : ICON.pause, c.n + ' · ' + c.title, audio.paused ? 'Paused – tap to continue' : 'Playing – tap to pause', fmtT(left));
+      act = 'play:' + c.n;
+    } else if (at) {                                             // you're at a spot: light up
+      cls = 'near';
+      html = pill(ICON.play, at.n + ' · ' + at.title, heard.has(at.n) ? 'Listen again' : 'Listen to the audio guide for this spot');
+      act = 'play:' + at.n;
+    } else {                                                     // inactive
+      var sub;
+      if (gps === 'denied') sub = 'Location is off – tap a pin on the map';
+      else if (gps === 'none') sub = 'No location – tap a pin on the map';
+      else if (gps === 'vague') sub = 'GPS is vague here (±' + fmtD(acc) + ')';
+      else if (gps === 'ok') { var nb = nearest(); sub = 'Nearest: ' + nb.s.n + ' · ' + fmtD(nb.d) + ' away'; }
+      else if (gps === 'finding') sub = 'Finding where you are…';
+      else sub = 'Tap to find spots near you';
+      html = pill(ICON.phones, 'Audio guide', sub);
+      act = gps === 'idle' ? 'gps' : 'map';
     }
     fl.className = 'wfloat ' + cls;
     fl.innerHTML = html;
-    fl.hidden = !show;
+    fl.dataset.act = act;
+    fl.hidden = false;
   }
 
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-play]');
-    if (t) { e.preventDefault(); play(+t.getAttribute('data-play'), false); if (map) map.closePopup(); }
+    if (t) { e.preventDefault(); play(+t.getAttribute('data-play')); if (map) map.closePopup(); }
   });
-  fl && fl.addEventListener('click', function () { var n = +fl.dataset.n; if (n) play(n, false); });
-  startBtn && startBtn.addEventListener('click', start);
-  var rs = $('#wreset');
-  rs && rs.addEventListener('click', function () { played = new Set(); save(); render(); });
+  fl && fl.addEventListener('click', function () {
+    var a = fl.dataset.act || '';
+    if (a.indexOf('play:') === 0) play(+a.slice(5));
+    else if (a === 'gps') startGps();
+    else { var m = document.getElementById('wmapsec'); if (m) m.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
 
   initMap();
   render();
+  startGps();                            // opened at a spot → light up as soon as we have a fix
 })();
