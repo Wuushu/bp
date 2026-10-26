@@ -24,7 +24,7 @@ jobs:
           import glob, os, numpy as np, soundfile as sf
           from kokoro import KPipeline
           pipe = KPipeline(lang_code='b', repo_id='hexgrad/Kokoro-82M')
-          for f in sorted(glob.glob('tts/vis-*.txt')):
+          for f in sorted(glob.glob('tts/vis-quiz-*.txt')):
               out = f[:-4] + '-bm_george.wav'
               if os.path.exists(out) and os.path.getmtime(out) > os.path.getmtime(f): continue
               text = open(f, encoding='utf-8').read()
