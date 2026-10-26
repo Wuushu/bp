@@ -18,8 +18,8 @@ jobs:
           set -x
           exec > >(tee tts/log-edge.txt) 2>&1
           python -m pip install -q edge-tts
-          for v in en-US-AndrewMultilingualNeural en-GB-RyanNeural; do
-            edge-tts --voice "$v" --file tts/en-budacastle.txt --write-media "tts/en-edge-$v.mp3"
+          for v in en-GB-RyanNeural; do
+            edge-tts --voice "$v" --file tts/en-gellert.txt --write-media "tts/en-gellert-edge-$v.mp3"
           done
       - name: kokoro
         continue-on-error: true
@@ -32,15 +32,15 @@ jobs:
           cat > /tmp/k.py <<'PY'
           import sys, numpy as np, soundfile as sf
           from kokoro import KPipeline
-          text = open('tts/en-budacastle.txt', encoding='utf-8').read()
-          for lang, voice in [('a', 'am_michael'), ('b', 'bm_george')]:
+          text = open('tts/en-gellert.txt', encoding='utf-8').read()
+          for lang, voice in [('b', 'bm_george')]:
               pipe = KPipeline(lang_code=lang)
               parts = []
               for r in pipe(text, voice=voice, speed=1.0, split_pattern=r'\n+'):
                   a = r[2] if isinstance(r, tuple) else r.audio
                   a = a.cpu().numpy() if hasattr(a, 'cpu') else np.asarray(a)
                   parts += [a, np.zeros(int(24000 * 0.5), dtype=a.dtype)]
-              sf.write(f'tts/en-kokoro-{voice}.wav', np.concatenate(parts), 24000)
+              sf.write(f'tts/en-gellert-kokoro-{voice}.wav', np.concatenate(parts), 24000)
               print('done', voice)
           PY
           python /tmp/k.py
