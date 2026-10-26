@@ -12,22 +12,44 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - name: synth
+      - name: edge
         continue-on-error: true
         run: |
           set -x
-          exec > >(tee tts/log.txt) 2>&1
+          exec > >(tee tts/log-edge.txt) 2>&1
           python -m pip install -q edge-tts
-          edge-tts --list-voices | grep -i sv-SE || true
-          for v in sv-SE-MattiasNeural sv-SE-SofieNeural; do
-            edge-tts --voice "$v" --rate=+3% --file tts/budaborgen.txt --write-media "tts/edge-$v.mp3"
+          for v in en-US-AndrewMultilingualNeural en-GB-RyanNeural; do
+            edge-tts --voice "$v" --file tts/en-budacastle.txt --write-media "tts/en-edge-$v.mp3"
           done
-          ls -la tts
+      - name: kokoro
+        continue-on-error: true
+        run: |
+          set -x
+          exec > >(tee tts/log-kokoro.txt) 2>&1
+          sudo apt-get install -y -qq espeak-ng >/dev/null
+          python -m pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q "kokoro>=0.9.4" soundfile
+          cat > /tmp/k.py <<'PY'
+          import sys, numpy as np, soundfile as sf
+          from kokoro import KPipeline
+          text = open('tts/en-budacastle.txt', encoding='utf-8').read()
+          for lang, voice in [('a', 'am_michael'), ('b', 'bm_george')]:
+              pipe = KPipeline(lang_code=lang)
+              parts = []
+              for r in pipe(text, voice=voice, speed=1.0, split_pattern=r'\n+'):
+                  a = r[2] if isinstance(r, tuple) else r.audio
+                  a = a.cpu().numpy() if hasattr(a, 'cpu') else np.asarray(a)
+                  parts += [a, np.zeros(int(24000 * 0.5), dtype=a.dtype)]
+              sf.write(f'tts/en-kokoro-{voice}.wav', np.concatenate(parts), 24000)
+              print('done', voice)
+          PY
+          python /tmp/k.py
       - name: commit
         if: always()
         run: |
+          ls -la tts
           git config user.name "tts-test"
           git config user.email "tts-test@users.noreply.github.com"
           git add -f tts/
-          git commit -m "TTS test audio (edge voices)" || echo "nothing to commit"
+          git commit -m "TTS test audio (english)" || echo "nothing to commit"
           git push
