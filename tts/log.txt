@@ -1,26 +1,21 @@
-+ python -m pip install -q piper-tts==1.2.0
++ python -m pip install -q edge-tts
 
 [notice] A new release of pip is available: 26.2.1 -> 26.2.2
 [notice] To update, run: pip install --upgrade pip
-+ mkdir -p voices
-+ base=https://huggingface.co/rhasspy/piper-voices/resolve/main/sv/sv_SE/nst/medium
-+ curl -sSfL -o voices/sv.onnx https://huggingface.co/rhasspy/piper-voices/resolve/main/sv/sv_SE/nst/medium/sv_SE-nst-medium.onnx
-+ curl -sSfL -o voices/sv.onnx.json https://huggingface.co/rhasspy/piper-voices/resolve/main/sv/sv_SE/nst/medium/sv_SE-nst-medium.onnx.json
-+ for f in tts/*.txt
-++ basename tts/budaborgen.txt .txt
-+ n=budaborgen
-+ '[' budaborgen = log ']'
-+ python -m piper --model voices/sv.onnx --output_file tts/budaborgen.wav --sentence_silence 0.35 --length_scale 1.05
-[0;93m2026-10-26 11:29:45.474876934 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-+ for f in tts/*.txt
-++ basename tts/log.txt .txt
-+ n=log
-+ '[' log = log ']'
-+ continue
++ edge-tts --list-voices
++ grep -i sv-SE
+sv-SE-MattiasNeural                Male      General                Friendly, Positive
+sv-SE-SofieNeural                  Female    General                Friendly, Positive
++ for v in sv-SE-MattiasNeural sv-SE-SofieNeural
++ edge-tts --voice sv-SE-MattiasNeural --rate=+3% --file tts/budaborgen.txt --write-media tts/edge-sv-SE-MattiasNeural.mp3
++ for v in sv-SE-MattiasNeural sv-SE-SofieNeural
++ edge-tts --voice sv-SE-SofieNeural --rate=+3% --file tts/budaborgen.txt --write-media tts/edge-sv-SE-SofieNeural.mp3
 + ls -la tts
-total 8940
-drwxr-xr-x 2 runner runner    4096 Oct 26 11:29 .
-drwxr-xr-x 7 runner runner    4096 Oct 26 11:29 ..
--rw-r--r-- 1 runner runner    2675 Oct 26 11:29 budaborgen.txt
--rw-r--r-- 1 runner runner 9134450 Oct 26 11:29 budaborgen.wav
--rw-r--r-- 1 runner runner    1216 Oct 26 11:29 log.txt
+total 11256
+drwxr-xr-x 2 runner runner    4096 Oct 26 11:54 .
+drwxr-xr-x 6 runner runner    4096 Oct 26 11:52 ..
+-rw-r--r-- 1 runner runner    2675 Oct 26 11:52 budaborgen.txt
+-rw-r--r-- 1 runner runner 9134450 Oct 26 11:52 budaborgen.wav
+-rw-r--r-- 1 runner runner 1241856 Oct 26 11:54 edge-sv-SE-MattiasNeural.mp3
+-rw-r--r-- 1 runner runner 1123920 Oct 26 11:55 edge-sv-SE-SofieNeural.mp3
+-rw-r--r-- 1 runner runner     717 Oct 26 11:55 log.txt
