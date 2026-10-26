@@ -14,11 +14,6 @@
   var audio = $('#waudio'), fl = $('#wfloat');
   var current = null, pos = null, acc = null, gps = 'idle', watchId = null, map = null, me = null, meAcc = null, pins = {};
   var heard = new Set();
-  var mini = false;                      // compact button once you scroll down the page
-  window.addEventListener('scroll', function () {
-    var m = window.scrollY > 420;
-    if (m !== mini) { mini = m; if (fl) fl.classList.toggle('mini', m); }
-  }, { passive: true });
 
   var ICON = {
     play: '<svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>',
@@ -155,7 +150,7 @@
       act = 'play:' + c.n;
     } else if (at) {                                             // you're at a spot: light up
       cls = 'near';
-      html = pill(ICON.play, at.n + ' · ' + at.title, heard.has(at.n) ? 'Listen again' : 'Listen to the audio guide for this spot', '', at.n);
+      html = pill(ICON.play, at.n + ' · ' + at.title, heard.has(at.n) ? 'Listen again' : 'Listen to the audio guide here', '', at.n);
       act = 'play:' + at.n;
     } else {                                                     // inactive
       var sub;
@@ -168,7 +163,7 @@
       html = pill(ICON.phones, 'Audio guide', sub);
       act = gps === 'idle' ? 'gps' : 'map';
     }
-    fl.className = 'wfloat ' + cls + (mini ? ' mini' : '');
+    fl.className = 'wfloat ' + cls;
     fl.innerHTML = html;
     fl.dataset.act = act;
     fl.hidden = false;

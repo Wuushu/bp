@@ -89,21 +89,19 @@ ol.stops{list-style:none;margin:0 0 6px;padding:0}
 .stop details{margin:6px 0 0 48px;font-size:15px;color:var(--ink2)}
 .stop summary{cursor:pointer;color:var(--muted);font-size:14px}
 .stop details p{margin:8px 0 0}
-.wfloat{position:fixed;z-index:2000;top:calc(56px + env(safe-area-inset-top));right:12px;max-width:calc(100% - 24px);display:flex;align-items:center;gap:10px;
- padding:8px 16px 8px 12px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:400 15px var(--sans);text-align:left;
- box-shadow:0 4px 16px rgba(26,46,68,.25);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.top .wfloat{margin-left:auto}
+.wfloat{display:flex;align-items:center;gap:8px;min-width:0;max-width:calc(100% - 92px);height:38px;padding:0 14px 0 10px;border-radius:999px;
+ border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:400 14px var(--sans);text-align:left;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .wfloat[hidden]{display:none}
-.wfloat svg{flex:none}
-.wfloat .wt{display:flex;flex-direction:column;min-width:0;line-height:1.2}
-.wfloat .wt b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.wfloat .wt small{font-size:12px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.wfloat em{font-style:normal;font-size:14px;opacity:.85;white-space:nowrap}
-.wfloat.off{background:rgba(255,255,255,.96);color:var(--muted);border-color:var(--rule);box-shadow:0 2px 10px rgba(26,46,68,.12)}
+.wfloat svg{flex:none;width:16px;height:16px}
+.wfloat .wt{display:flex;flex-direction:column;min-width:0;line-height:1.15}
+.wfloat .wt b{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wfloat .wt small{font-size:11px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wfloat em{font-style:normal;font-size:13px;opacity:.85;white-space:nowrap}
+.wfloat .wn{display:none}
+.wfloat.off{background:#fff;color:var(--muted);border-color:var(--rule)}
 .wfloat.off .wt b{color:var(--ink2)}
-.wfloat .wn{display:none;font:400 17px/1 var(--serif)}
-.wfloat.mini{padding:10px 14px;gap:6px}
-.wfloat.mini .wt,.wfloat.mini em{display:none}
-.wfloat.mini .wn{display:block}
+#wmapsec{scroll-margin-top:60px}
 .wfloat.near{background:var(--accent);border-color:var(--accent);color:#fff;animation:wpulse 1.6s ease-in-out infinite}
 @keyframes wpulse{0%,100%{box-shadow:0 0 0 0 rgba(178,48,43,.55)}50%{box-shadow:0 0 0 12px rgba(178,48,43,0)}}
 @media (prefers-reduced-motion:reduce){.wfloat.near{animation:none}}
@@ -117,7 +115,7 @@ ol.stops{list-style:none;margin:0 0 6px;padding:0}
 .quizsec{background:var(--mist);border-radius:16px;padding:16px;margin:26px 0}
 .quizsec h2{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
 .quizsec h2 .qn{font:400 14px var(--sans);color:var(--muted)}
-.qz{min-height:120px;scroll-margin-top:120px}
+.qz{min-height:120px;scroll-margin-top:64px}
 .qlead{margin:0 0 12px;color:var(--ink2);font-size:16px}
 .qlabel{margin:0 0 8px;font-weight:600}
 .qchips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
