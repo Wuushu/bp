@@ -24,8 +24,20 @@
   var roster = load(PKEY) || ['Player 1', 'Player 2'];      // names known on this phone
   var chosen = {};                                          // index in roster → selected
   var speak = load(SKEY) !== false;
-  var st = load(KEY);                                       // {players, scores, i, picked, done}
-  var editing = -1;
+  var st = load(KEY);                                       // {players, scores, i, picked, done, ready, t}
+  var editing = -1, resumed = false;
+  var COLS = ['#B2302B', '#2F6FB0', '#2E8B57', '#A8740A'];  // one colour per player
+  if (st && (!st.t || Date.now() - st.t > 6 * 3600e3)) { st = null; save(KEY, null); }   // stale round → start fresh
+  else if (st && !st.done) resumed = true;
+  function saveSt() { if (st) st.t = Date.now(); save(KEY, st); }
+  function col(i) { return COLS[i % COLS.length]; }
+  function board(cur) {
+    var best = Math.max.apply(null, st.scores);
+    return '<ol class="qboard">' + st.players.map(function (p, i) { return { p: p, s: st.scores[i], i: i }; })
+      .sort(function (a, b) { return cur === undefined ? b.s - a.s : a.i - b.i; })
+      .map(function (r) { return '<li class="' + (cur === undefined ? (r.s === best ? 'top' : '') : (r.i === cur ? 'cur' : '')) + '" style="--pc:' + col(r.i) + '"><span><i class="qdot2"></i>' + esc(r.p) + '</span><b>' + r.s + '</b></li>'; }).join('') + '</ol>';
+  }
+  function resumeNote() { return resumed ? '<p class="qresume">Picking up where you left off · <button type="button" class="linkbtn" data-change="1">Start over</button></p>' : ''; }
 
   var SPK = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 
@@ -79,7 +91,7 @@
       '<p class="qlead">' + N + ' questions about ' + esc(Q.place) + '. The answers are in the audio guides and the bonus track.</p>' +
       '<p class="qlabel">Who’s playing?</p>' +
       '<div class="qchips">' + chips + (roster.length < 4 ? '<button type="button" class="qadd" data-add="1">+ Add player</button>' : '') + '</div>' +
-      '<p class="qhint">' + (n > 1 ? 'You’ll take turns' + (N % n === 0 ? ' – ' + (N / n) + ' questions each.' : ', one question each.') : 'Pick one or more. Tap ✎ to put in your names – they stay on this phone.') + '</p>' +
+      '<p class="qhint">' + (n > 1 ? 'You take turns' + (N % n === 0 ? ' – ' + (N / n) + ' questions each' : ', one question each') + ', and the most right answers wins. Tap ✎ to put in your names – they stay on this phone.' : 'Playing solo. Pick more players to take turns and compete.') + '</p>' +
       '<label class="qspeak"><input type="checkbox" id="qspk"' + (speak ? ' checked' : '') + '> Read the questions aloud</label>' +
       '<button type="button" class="btn primary qgo" data-go="1"' + (n ? '' : ' disabled') + '>Start the quiz</button>';
     var inp = document.getElementById('qname');
@@ -91,13 +103,26 @@
     }
   }
 
-  function scoresLine() {
+  function scoresLine(who) {
     if (st.players.length < 2) return '<span class="qsc" data-p="0">✓ ' + st.scores[0] + '</span>';
-    return st.players.map(function (p, i) { return '<span class="qsc" data-p="' + i + '">' + esc(p) + ' <b>' + st.scores[i] + '</b></span>'; }).join('');
+    return st.players.map(function (p, i) { return '<span class="qsc' + (i === who ? ' cur' : '') + '" data-p="' + i + '" style="--pc:' + col(i) + '"><i class="qdot2"></i>' + esc(p) + ' <b>' + st.scores[i] + '</b></span>'; }).join('');
+  }
+
+  function handoverScreen() {                                 // multi-player: whose turn, before each question
+    var who = st.i % st.players.length, name = esc(st.players[who]);
+    root.innerHTML = resumeNote() +
+      '<div class="qhand" style="--pc:' + col(who) + '">' +
+      '<p class="qcount">Question ' + (st.i + 1) + ' of ' + N + '</p>' +
+      '<p class="qhwho">' + name + '’s turn</p>' +
+      '<p class="qhsub">' + (st.i === 0 ? name + ' goes first.' : 'Pass the phone to ' + name + '.') + '</p>' +
+      board(who) +
+      '<button type="button" class="btn primary qready" data-ready="1">I’m ready – show the question</button></div>' +
+      '<button type="button" class="qreset" data-reset="1">↺ Reset quiz</button>';
   }
 
   function questionScreen(fresh) {
-    var q = qs[st.i], who = st.i % st.players.length, multi = st.players.length > 1;
+    var q = qs[st.i], who = st.i % st.players.length, multi = st.players.length > 1, name = esc(st.players[who]);
+    var nextName = multi ? esc(st.players[(st.i + 1) % st.players.length]) : '';
     var opts = q.options.map(function (o, k) {
       var cls = '';
       if (st.picked !== null) { if (k === q.answer) cls = ' right'; else if (k === st.picked) cls = ' wrong'; else cls = ' dim'; }
@@ -106,13 +131,13 @@
     var fb = '';
     if (st.picked !== null) {
       var ok = st.picked === q.answer;
-      fb = '<div class="qfb ' + (ok ? 'ok' : 'no') + '"><b>' + (ok ? (multi ? 'Correct, ' + esc(st.players[who]) + '!' : 'Correct!') : 'Not quite – the answer is “' + esc(q.options[q.answer]) + '”.') + '</b> ' + esc(q.why) + '</div>' +
-        '<button type="button" class="btn primary qnext" data-next="1">' + (st.i + 1 < N ? 'Next question →' : 'See the result') + '</button>';
+      fb = '<div class="qfb ' + (ok ? 'ok' : 'no') + '"><b>' + (ok ? (multi ? 'Correct, ' + name + '! +1 point' : 'Correct!') : (multi ? 'Not quite, ' + name + ' – ' : 'Not quite – ') + 'the answer is “' + esc(q.options[q.answer]) + '”.') + '</b> ' + esc(q.why) + '</div>' +
+        '<button type="button" class="btn primary qnext" data-next="1">' + (st.i + 1 < N ? (multi ? 'Next: ' + nextName + '’s turn →' : 'Next question →') : (multi ? 'See who won →' : 'See the result')) + '</button>';
     }
-    root.innerHTML =
-      '<div class="qtop"><span class="qcount">Question ' + (st.i + 1) + ' of ' + N + '</span><span class="qscores">' + scoresLine() + '</span></div>' +
+    root.innerHTML = resumeNote() +
+      '<div class="qtop"><span class="qcount">Question ' + (st.i + 1) + ' of ' + N + '</span><span class="qscores">' + scoresLine(multi ? who : undefined) + '</span></div>' +
       '<div class="qbar"><i style="width:' + ((st.i + (st.picked !== null ? 1 : 0)) / N * 100) + '%"></i></div>' +
-      (multi ? '<p class="qturn">' + esc(st.players[who]) + '’s turn</p>' : '') +
+      (multi ? '<div class="qwho" style="--pc:' + col(who) + '"><i class="qdot"></i>' + name + '’s turn</div>' : '') +
       '<h3 class="qq">' + esc(q.q) + '</h3>' +
       '<button type="button" class="qlisten" data-listen="1">' + SPK + ' Listen</button>' +
       '<div class="qopts">' + opts + '</div>' + fb +
@@ -127,9 +152,9 @@
       html = '<p class="qbig">' + s + '<small> of ' + N + '</small></p><p class="qmsg">' + msg + '</p>';
     } else {
       var best = Math.max.apply(null, st.scores), winners = st.players.filter(function (p, i) { return st.scores[i] === best; });
-      html = '<p class="qwin">' + (winners.length > 1 ? 'It’s a draw!' : '🏆 ' + esc(winners[0]) + ' wins!') + '</p><ol class="qboard">' +
-        st.players.map(function (p, i) { return { p: p, s: st.scores[i] }; }).sort(function (a, b) { return b.s - a.s; })
-          .map(function (r) { return '<li' + (r.s === best ? ' class="top"' : '') + '><span>' + esc(r.p) + '</span><b>' + r.s + '</b></li>'; }).join('') + '</ol>';
+      var wi = st.players.indexOf(winners[0]);
+      html = '<p class="qwin"' + (winners.length > 1 ? '' : ' style="color:' + col(wi) + '"') + '>' + (winners.length > 1 ? 'It’s a draw!' : '🏆 ' + esc(winners[0]) + ' wins!') + '</p>' +
+        '<p class="qmsg">' + st.scores.join(' – ') + ' out of ' + N + ' questions</p>' + board();
     }
     root.innerHTML = '<div class="qend">' + html + '</div>' +
       '<div class="row2"><button type="button" class="btn primary" data-again="1">Play again</button><button type="button" class="btn" data-change="1">Change players</button></div>';
@@ -139,6 +164,7 @@
   function render(fresh) {
     if (!st) startScreen();
     else if (st.done) endScreen();
+    else if (st.players.length > 1 && !st.ready && st.picked === null) handoverScreen();
     else questionScreen(fresh);
   }
 
@@ -155,7 +181,7 @@
     if (audio) audio.pause();
     var ok = k === q.answer;
     if (ok) st.scores[who]++;
-    save(KEY, st);
+    saveSt();
     questionScreen(false);
     var btn = root.querySelector('.qopt[data-opt="' + (ok ? k : q.answer) + '"]');
     if (ok) {
@@ -171,6 +197,7 @@
   root.addEventListener('click', function (e) {
     var t = e.target.closest('button,[data-pick]');
     if (!t) return;
+    if (!t.dataset.change) resumed = false;
     if (t.dataset.pick !== undefined) { var i = +t.dataset.pick; chosen[i] = !chosen[i]; startScreen(); }
     else if (t.dataset.ren !== undefined) { editing = +t.dataset.ren; startScreen(); }
     else if (t.dataset.add) { roster.push('Player ' + (roster.length + 1)); save(PKEY, roster); editing = roster.length - 1; chosen[editing] = true; startScreen(); }
@@ -178,17 +205,18 @@
       var ps = roster.filter(function (p, i) { return chosen[i]; });
       if (!ps.length) return;
       var cb = document.getElementById('qspk'); speak = !cb || cb.checked; save(SKEY, speak);
-      st = { players: ps, scores: ps.map(function () { return 0; }), i: 0, picked: null, done: false };
-      save(KEY, st); render(true); root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      st = { players: ps, scores: ps.map(function () { return 0; }), i: 0, picked: null, done: false, ready: ps.length < 2 };
+      saveSt(); render(true); root.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     else if (t.dataset.opt !== undefined) answer(+t.dataset.opt);
     else if (t.dataset.listen) listen();
+    else if (t.dataset.ready) { st.ready = true; saveSt(); render(true); root.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     else if (t.dataset.next) {
-      if (st.i + 1 < N) { st.i++; st.picked = null; } else st.done = true;
-      save(KEY, st); render(true); root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (st.i + 1 < N) { st.i++; st.picked = null; st.ready = st.players.length < 2; } else st.done = true;
+      saveSt(); render(true); root.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    else if (t.dataset.again) { st = { players: st.players, scores: st.players.map(function () { return 0; }), i: 0, picked: null, done: false }; save(KEY, st); render(true); }
-    else if (t.dataset.change) { st = null; save(KEY, null); chosen = {}; render(false); }
+    else if (t.dataset.again) { st = { players: st.players, scores: st.players.map(function () { return 0; }), i: 0, picked: null, done: false, ready: st.players.length < 2 }; saveSt(); render(true); }
+    else if (t.dataset.change) { if (audio) audio.pause(); resumed = false; st = null; save(KEY, null); chosen = {}; roster.forEach(function (p, i) { chosen[i] = true; }); render(false); }
     else if (t.dataset.reset) {
       if (t.dataset.armed) {                                   // second tap: back to the start, same players picked
         if (audio) audio.pause();
@@ -203,6 +231,7 @@
   root.addEventListener('change', function (e) { if (e.target.id === 'qspk') { speak = e.target.checked; save(SKEY, speak); } });
 
   if (st && st.players) roster.forEach(function (p, i) { if (st.players.indexOf(p) >= 0) chosen[i] = true; });
+  else roster.forEach(function (p, i) { chosen[i] = true; });             // default: everyone known on this phone plays
   render(false);
 
   /* ---------- bonus track ---------- */
