@@ -118,7 +118,7 @@
     var share = N ? st.score / N : 0, pct = Math.round(share * 100), g = gradeFor(share), top = g === GRADES[0];
     var C = 2 * Math.PI * 52;
     var ladder = GRADES.slice().reverse().map(function (x) {
-      return '<li class="' + (x === g ? 'on' : '') + '"><span>' + x.icon + '</span><small>' + Math.round(x.min * 100) + '%+</small></li>';
+      return '<li class="' + (x === g ? 'on' : '') + '"><span>' + x.icon + '</span><small>' + (x.min ? Math.round(x.min * 100) + '%+' : 'Any') + '</small></li>';
     }).join('');
     root.innerHTML =
       '<div class="qres' + (animate && !reduce ? '' : ' done') + '">' +
